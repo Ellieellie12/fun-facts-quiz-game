@@ -1,5 +1,5 @@
  /*-------------------------------- Constants --------------------------------*/
-const choices = ['oceans','birds','fish']
+const categoryChoices = ['oceans','birds','fish']
 
 
 
