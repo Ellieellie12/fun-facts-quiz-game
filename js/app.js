@@ -1,5 +1,5 @@
 /*-------------------------------- Constants --------------------------------*/
-const categoryChoices = ['oceans', 'birds', 'fish']
+const categoryChoices = ['ocean', 'birds', 'fish']
 
 
 
@@ -7,7 +7,7 @@ const categoryChoices = ['oceans', 'birds', 'fish']
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let turn, winner, tie
+let playerOne, playerTwo, turn, winner, tie
 let score = 0
 
 
@@ -16,17 +16,37 @@ let score = 0
 
 
 /*------------------------ Cached Element References ------------------------*/
-
+const oceanButton = document.getElementById('oceans')
 
 
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-// document.getElementById('oceans').addEventListener('click',play)
-// document.getElementById('birds').addEventListener('click',play)
-// document.getElementById('fish').addEventListener('click',play)
+oceanButton.addEventListener('click', function(e) {
+  console.log('The button was clicked')
+})
+// document.getElementById('birds').addEventListener('onClick',play)
+// document.getElementById('fish').addEventListener('onClick',play)
 
 
 /*-------------------------------- Functions --------------------------------*/
 
-// function play()
+// function play(event){
+//   console.log('The button was clicked')
+// }
+
+
+
+
+
+
+// function play(event) {
+// getPlayerOne(event)
+// }
+
+
+// function getPlayerOne(event) {
+//   playerOne = event.target.id
+// }
+
+// console.log(getPlayerOne)
