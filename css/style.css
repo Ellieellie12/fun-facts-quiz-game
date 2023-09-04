@@ -5,6 +5,43 @@ h2 {
   text-align: center;
 }
 
-button {
-  text-align: center;
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin: 10px 10px;
+  margin-left: auto;
+  padding: 
+
+}
+
+div {
+  margin: 0px 50px
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* padding: 10px 10px 10px 10px; */
+  /* margin:  */
+
+}
+
+#oceans {
+  color: blue;
+  margin: 30px;
+}
+
+#birds {
+color:aquamarine;
+margin: 30px;
+
+}
+
+#fish {
+  margin: 30px
 }
