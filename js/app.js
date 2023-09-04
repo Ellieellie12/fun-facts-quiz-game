@@ -8,10 +8,10 @@ const categoryChoices = ['oceans', 'birds', 'fish']
 
 /*---------------------------- Variables (state) ----------------------------*/
 let turn, winner, tie
-
 let score = 0
 
-// let playerOneScore, playerTwoScore,
+
+
 
 
 
