@@ -1,5 +1,6 @@
-import { getRandomFunFactOcean } from "./fun-facts.js"
-
+import { getRandomFunFactFish, getRandomFunFactOcean } from "./fun-facts.js"
+import { getRandomFunFactBird } from "./fun-facts.js"
+import { getRandomFunFactFish} from "./fun-facts.js"
 /*-------------------------------- Constants --------------------------------*/
 
 

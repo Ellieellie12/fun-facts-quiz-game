@@ -28,6 +28,7 @@ export {
   getRandomFunFactOcean,
 }
 
+
 const funFactsBirds = [
 {isBirds:true, fact:'There are more than 18,000 bird species in the world.'},
 {isBirds:true, fact: 'Birds are the only animal with feathers.'},
@@ -48,15 +49,44 @@ const funFactsBirds = [
 {isBirds: false ,fact: 'Bats are birds.'},
 {isBirds: false, fact:'You can find red cardinals all over Europe.'},
 {isBirds: false, fact:'Birds are mammals.'}
-
 ]
 
 function getRandomFunFactBird() {
   return funFactBirds[Math.floor(Math.random() * getRandomFunFactBird.length)]
 }
+export {
+  getRandomFunFactBird,
+}
+
 
 
 const fish = [
-
-  
+{isFish: true, fact: '14 percent of protein consumption comes from fish.'},
+{isFish: true, fact: 'Fish do not sleep the same way land mammals do, they rest.'},
+{isFish: true, fact: 'Fish are cold blooded.'},
+{isFish: true, fact: 'Tuna fish offers a lot of Vitamin D.'},
+{isFish: true, fact: ' The bass and sunfish are native to North America.'},
+{isFish: true, fact: 'Fish breathe through their gills.'},
+{isFish: true, fact: 'The Angler fish is one of the scariest fish in the world.'},
+{isFish: true, fact: 'Betta fish are known to fight each other.'},
+{isFish: true, fact: 'Jellyfish are not fish.'},
+{isFish: true, fact: 'Fish are excellent at communicating.'},
+{isFish: false, fact:'Goldfish can taste their food.'},
+{isFish: false, fact: 'Salmon have a horrible sense of smell.'},
+{isFish: false, fact: 'There are 100 species of fish swimming in North Americas fresh waters.'},
+{isFish: false, fact: 'Seahorses are not fish.'},
+{isFish: false, fact: 'Eels are not fish although they look similar to fish.'},
+{isFish: false, fact: 'All fish have bones.'},
+{isFish: false,fact: 'All fish have eyelids and external ears.'},
+{isFish: false, fact:'Clownfish eggs can only hatch at a specific time of year.'},
+{isFish: false, fact: 'Fish can not change color.'},
+{isFish: false, fact: 'Fish come in one size and color.'}
 ]
+
+function getRandomFunFactFish() {
+  return funFactFish[Math.floor(Math.random() * getRandomFunFactFish.length)]
+}
+
+export {
+  getRandomFunFactFish,
+}
