@@ -15,7 +15,7 @@ let currentCategory, winner, score
 const oceanButton = document.getElementById('oceans')
 // const birdsButton = document.getElementById('birds')
 // const fishButton = document.getElementById('fish')
-
+const messageResult = document.getElementById('messageEl')
 /*----------------------------- Event Listeners -----------------------------*/
 // oceanButton.addEventListener('click', function (e) {
 //    const funFact = prompt(funFactOceans)
@@ -39,19 +39,29 @@ function init() {
 
 
 function createFunFactOcean() {
-   // oceansimg.style.visibility = 'hidden'
-   //hide images once button is clicked 
+   oceansimg.style.visibility = 'hidden'
 
-      currentCategoryFacts.push(funFactsOceans)
-  
+   const fact = funFactsOceans[0]
+   
+   currentCategoryFacts.push(fact)
+   messageResult.innerHTML = currentCategoryFacts[0].fact
+
+
+
+   //   funFactsOceans.forEach() {
+
 }
+
+//   funFactsOceans.forEach() {
+//iterate through the array with forEach method?
 
 // funFactsOceans.push(newFunFact)
 
 // funFactsOceans.push(newFunFact)
 //then display one fun fact
 
-//i have to push my funfacts into my empty array of currentcategpor fcats
+//i have to push my funfacts into my empty array of currentcategoryfacts
+
 function currentCategoryFact() {
 
 
