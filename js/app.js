@@ -53,9 +53,6 @@ function createFunFactOcean() {
 
 }
 
-// function trueButton (){
-
-// }
 
 // function nextQuestion() {
 //    if(currentCategoryIndex >= funFactsOceans.length) {
@@ -102,11 +99,16 @@ function nextQuestion() {
    //    })
    // }
 }
-// console.log(nextQuestion())
+
 function randomFact() {
    return Math.floor(Math.random() * funFactsOceans.length)
-   
+
 }
+
+function filterOutDuplicates(currentFact) {
+   return funFactsOceans.filter((fact) => fact.fact !== currentFact)
+}
+const duplicateElements = toF(funFactsOceans)
 
 
 
