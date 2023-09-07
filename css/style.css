@@ -34,25 +34,86 @@ div {
 #oceans {
   color: blue;
   margin: 30px;
+  font-size: 16px;
+  background-color: snow;
+  border-radius: 4px;
 }
 
 #birds {
 color: red;
 margin: 30px;
-
+font-size: 16px;
+background-color: snow;
+border-radius: 4px;
 }
 
 #fish {
-  margin: 30px
+  color: green;
+  margin: 30px;
+  font-size: 16px;
+  background-color: snow;
+  border-radius: 4px;
 }
 
 /* #trueocean {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 
 } */
 
+.trueandfalseoceans {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: left;
+}
 
+#trueocean {
+  color: blue;
+  font-size:16px ;
+  background-color: snow;
+  border-radius: 4px;
+}
+
+#falseocean {
+  color:blue;
+font-size:16px;
+background-color: snow;
+border-radius: 4px;
+}
+
+
+
+#truebird {
+  color:red;
+  font-size:16px;
+  background-color: snow;
+  border-radius: 4px;
+
+}
+
+#falsebird {
+  color:red;
+  font-size:16px;
+  background-color: snow;
+  border-radius: 4px;
+
+}
+
+#truefish{
+color:green;
+font-size:16px;
+background-color: snow;
+border-radius: 4px;
+
+}
+
+#falsefish{
+color: green;
+font-size:16px;
+background-color: snow;
+border-radius: 4px;
+}
 

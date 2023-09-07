@@ -2,7 +2,7 @@ import { funFactsFish } from "./fun-facts.js"
 import { funFactsOceans } from "./fun-facts.js"
 import { funFactsBirds } from "./fun-facts.js"
 
-console.log(funFactsOceans)
+
 /*-------------------------------- Constants --------------------------------*/
 const categoryChoices = ['ocean', 'birds', 'fish']
 const currentCategoryFacts = []
