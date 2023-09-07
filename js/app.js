@@ -29,16 +29,18 @@ birdsButton.addEventListener('click', createFunFactBird)
 fishButton.addEventListener('click', createFunFactFish)
 // document.getElementById('birds').addEventListener('click', createFunFactBird)
 // document.getElementById('fish').addEventListener('click',play)
-document.getElementById('trueocean').addEventListener('click', nextQuestion)
+document.getElementById('trueocean').addEventListener('click', nextQuestionOne)
 document.getElementById('falseocean').addEventListener('click', nextQuestionOcean)
-oceanImage.addEventListener('click', function (evt) {
+document.getElementById('truebird').addEventListener('click', nextQuestionTwo)
+document.getElementById('falsebird').addEventListener('click',nextQuestionBirds)
+// oceanImage.addEventListener('click', function (evt) { // add audio files to this image or another one of the images and if possible see if you can add audio when hovering over text
 
-})
+// })
 /*-------------------------------- Functions --------------------------------*/
 function init() {
    winner = false
    score = 0
-   nextQuestion()
+   nextQuestionOne()
    render()
 }
 
@@ -71,7 +73,7 @@ function createFunFactFish (){
    falsefish.style.display = 'block'
 }
 
-function nextQuestion() {
+function nextQuestionOne() {
    const random = randomFact()
    const oceanFact = funFactsOceans[random]
    messageResult.innerHTML = oceanFact.fact
@@ -84,6 +86,21 @@ function nextQuestionOcean() {
    messageResult.innerHTML = oceanFact.fact
 
 }
+
+function nextQuestionTwo() {
+   const random = randomFact()
+   const birdFact = funFactsBirds[random]
+   messageResult.innerHTML = birdFact.fact
+}
+
+function nextQuestionBirds(){
+   const random = randomFact()
+   const birdFact = funFactsBirds[random]
+   messageResult.innerHTML = birdFact.fact
+
+}
+
+
 
 function randomFact() {
    return Math.floor(Math.random() * funFactsOceans.length)
