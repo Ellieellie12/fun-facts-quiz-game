@@ -1,8 +1,12 @@
 h1 {
+  
   text-align: center;
+  font-weight: 360;
+  font-size: 45px;
 }
 h2 {
   text-align: center;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .container {

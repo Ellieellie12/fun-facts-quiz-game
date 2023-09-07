@@ -1,7 +1,7 @@
 const funFactsOceans = [
   { isOceans: true, fact: 'The largest ocean in the world is the Pacific Ocean.' },
   { isOceans: true, fact: 'Most wildlife lives in the ocean.' },
-  { isOceans: true, fact: 'The planets longest mountain range is underwater.' },
+  { isOceans: true, fact: "The planet's longest mountain range is underwater." },
   { isOceans: true, fact: 'Fear of the ocean is called Thalassophobia.' },
   { isOceans: true, fact: 'The furthest part of the ocean is called Point Nemo.' },
   { isOceans: true, fact: 'About 70 percent of the oxygen we breathe	is produced by the oceans.' },
@@ -88,3 +88,6 @@ export {
   funFactsOceans,
   funFactsBirds
 }
+
+
+//NOTES: CHANGE ALL SINGLE QUOTES IN THIS DATA TO DOUBLE 
