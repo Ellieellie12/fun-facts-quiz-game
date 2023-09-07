@@ -31,7 +31,7 @@ oceanButton.addEventListener('click', createFunFactOcean)
 // document.getElementById('fish').addEventListener('onClick',play)
 document.getElementById('trueocean').addEventListener('click', nextQuestion)
 
-oceanImage.addEventListener('click',function(evt){
+oceanImage.addEventListener('click', function (evt) {
 
 })
 /*-------------------------------- Functions --------------------------------*/
@@ -82,25 +82,33 @@ function createFunFactOcean() {
 
 
 
-let tempArray = []
+// let tempArray = []
 
 
 
 function nextQuestion() {
-   messageResult.innerHTML = currentCategoryFacts.fact
-   for (let i = 0; i < funFactsOceans.length; i++) {
-        randomIndex = randomFact()
-      funFactsOceans.forEach((fact, index) => {
-   if( fact[randomIndex] === funFactsOceans[index])
-   console.log(fact)
-       })
-   }
+   const random = randomFact()
+   const oceanFact = funFactsOceans[random]
+   messageResult.innerHTML = oceanFact.fact
+   // if(currentCategoryFacts !== messageResult)
+   // return 
+   // messageResult.innerHTML = currentCategoryFacts.fact
+   // for (let i = 0; i < funFactsOceans.length; i++) {
+   //    randomIndex = randomFact()
+   //    funFactsOceans.forEach((fact, index) => {
+   //       if (fact[randomIndex] === funFactsOceans[index])
+   //       funFactsOceans.pop()
+   //          console.log(fact)
+   //    })
+   // }
 }
-console.log(nextQuestion())
+// console.log(nextQuestion())
 function randomFact() {
-  return Math.floor(Math.random() * funFactsOceans.length)
-//   return randomIndex
+   return Math.floor(Math.random() * funFactsOceans.length)
+   
 }
+
+
 
 // function nextQuestion(){
 //    const trueButton = funFactsOceans[currentCategoryIndex]
