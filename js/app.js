@@ -15,14 +15,13 @@ let currentCategory, winner, score, randomIndex
 const oceanButton = document.getElementById('oceans')
 // const birdsButton = document.getElementById('birds')
 // const fishButton = document.getElementById('fish')
+
 const messageResult = document.getElementById('messageEl')
 const trueButton = document.getElementById('trueocean')
 const falseButton = document.getElementById('falseocean')
 const oceanImage = document.getElementById('oceansimg')
 // const nextFactDiv = document.getElementById('factEl')
 /*----------------------------- Event Listeners -----------------------------*/
-// oceanButton.addEventListener('click', function (e) {
-//    const funFact = prompt(funFactOceans)
 
 
 oceanButton.addEventListener('click', createFunFactOcean)
@@ -30,7 +29,7 @@ oceanButton.addEventListener('click', createFunFactOcean)
 // document.getElementById('birds').addEventListener('onClick',play)
 // document.getElementById('fish').addEventListener('onClick',play)
 document.getElementById('trueocean').addEventListener('click', nextQuestion)
-
+document.getElementById('falseocean').addEventListener('click', nextQuestionOcean)
 oceanImage.addEventListener('click', function (evt) {
 
 })
@@ -52,6 +51,71 @@ function createFunFactOcean() {
    falseocean.style.display = 'block'
 
 }
+
+
+function nextQuestion() {
+   const random = randomFact()
+   const oceanFact = funFactsOceans[random]
+   messageResult.innerHTML = oceanFact.fact
+  
+}
+
+function nextQuestionOcean() {
+   const random = randomFact()
+   const oceanFact = funFactsOceans[random]
+   messageResult.innerHTML = oceanFact.fact
+
+}
+
+function randomFact() {
+   return Math.floor(Math.random() * funFactsOceans.length)
+
+}
+
+// function filterOutDuplicates(currentFact) {
+//    return funFactsOceans.filter((fact) => fact.fact !== currentFact)
+// }
+// const duplicateElements = toF(funFactsOceans)
+
+
+
+function playerScore() {
+
+   //if else statement
+}
+
+function randomFunFactOceans() {
+
+}
+
+
+function currentCategoryFact() {
+
+}
+
+
+function render() {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // function nextQuestion() {
@@ -77,41 +141,6 @@ function createFunFactOcean() {
 //    currentCategory = funFactsOceans[nextFact]
 // }
 
-
-
-// let tempArray = []
-
-
-
-function nextQuestion() {
-   const random = randomFact()
-   const oceanFact = funFactsOceans[random]
-   messageResult.innerHTML = oceanFact.fact
-   // if(currentCategoryFacts !== messageResult)
-   // return 
-   // messageResult.innerHTML = currentCategoryFacts.fact
-   // for (let i = 0; i < funFactsOceans.length; i++) {
-   //    randomIndex = randomFact()
-   //    funFactsOceans.forEach((fact, index) => {
-   //       if (fact[randomIndex] === funFactsOceans[index])
-   //       funFactsOceans.pop()
-   //          console.log(fact)
-   //    })
-   // }
-}
-
-function randomFact() {
-   return Math.floor(Math.random() * funFactsOceans.length)
-
-}
-
-function filterOutDuplicates(currentFact) {
-   return funFactsOceans.filter((fact) => fact.fact !== currentFact)
-}
-const duplicateElements = toF(funFactsOceans)
-
-
-
 // function nextQuestion(){
 //    const trueButton = funFactsOceans[currentCategoryIndex]
 //    messageResult.innerHTML = currentCategoryFacts.fact
@@ -128,14 +157,6 @@ const duplicateElements = toF(funFactsOceans)
 //    currentCategoryFacts.push(isOceans)
 // }
 
-function playerScore() {
-
-   //if else statement
-}
-
-function randomFunFactOceans() {
-
-}
 //   funFactsOceans.forEach() {
 //iterate through the array with forEach method?
 
@@ -145,21 +166,39 @@ function randomFunFactOceans() {
 //then display one fun fact
 
 //i have to push my funfacts into my empty array of currentcategoryfacts
+// function nextQuestion(){
+//    const trueButton = funFactsOceans[currentCategoryIndex]
+//    messageResult.innerHTML = currentCategoryFacts.fact
+//    currentCategoryIndex++
+//    if (currentCategoryFacts >= funFactsOceans.length) {
+//       currentCategoryIndex = 0
 
-function currentCategoryFact() {
-
-
-}
-
-function render() {
-}
-
-
-
+//    }
+// }
 
 
+// function nextQuestion() {
+//    const answerTrue = funFactsOceans[0]
+//    currentCategoryFacts.push(isOceans)
+// }
 
-
+// function nextQuestion() {
+//    const random = randomFact()
+//    const oceanFact = funFactsOceans[random]
+//    messageResult.innerHTML = oceanFact.fact
+//    //working code above just in case
+//    // if(currentCategoryFacts !== messageResult)
+//    // return 
+//    // messageResult.innerHTML = currentCategoryFacts.fact
+//    // for (let i = 0; i < funFactsOceans.length; i++) {
+//    //    randomIndex = randomFact()
+//    //    funFactsOceans.forEach((fact, index) => {
+//    //       if (fact[randomIndex] === funFactsOceans[index])
+//    //       funFactsOceans.pop()
+//    //          console.log(fact)
+//    //    })
+//    // }
+// }
 
 
 
