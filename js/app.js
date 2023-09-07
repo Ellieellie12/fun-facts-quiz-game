@@ -153,17 +153,17 @@ function checkAnswerOcean(isTrue) {
    }
 }
 
-function checkAnswerOceanTwo(isFalse) {
-   if(currentCategoryIndex < funFactsOceans.length) {
-      const wrongAnswer = funFactsOceans[currentCategoryIndex].isOceans
-      if(isFalse === wrongAnswer) 
-      score--
+// function checkAnswerOceanTwo(isFalse) {
+//    if(currentCategoryIndex < funFactsOceans.length) {
+//       const wrongAnswer = funFactsOceans[currentCategoryIndex].isOceans
+//       if(isFalse === wrongAnswer) 
+//       score--
 
-   }
-   currentCategoryIndex--
-   updateScore()
+//    }
+//    currentCategoryIndex--
+//    updateScore()
 
-}
+// }
 
 
 function updateScore() {
@@ -207,7 +207,8 @@ function render() {
 
 
 
-//NOTES FOR TOMORROW ADD A TIMER, SCORE BOARD, AUDIO, 
+
+//NOTES FOR TOMORROW ADD A TIMER, SCORE BOARD, AUDIO, ASK ABOUT THE MESSAGE ELEMENT FOR BIRD AND FISH 
 
 
 
