@@ -1,4 +1,4 @@
-# Title: Fun Fact Quiz Game
+# Fun Fact Quiz Game
 ## How Well Do You Know These Facts?
 Description: I chose to make this quiz game for children so that they would have a nice experience while they're learning new facts about the world.
 
@@ -7,13 +7,13 @@ Getting Started: Click the link to play
 
 Attributions: get the link of the sound and image website you used and add it here
 
-
+#
 ### Technologies Used: 
 1. Javascript
 2. CSS
 3. HTML
 
-
+#
 
 ### Future Plans For The Game:
 - I plan to add seven more categories to the game to give whoever plays the game more options to pick from.
@@ -22,6 +22,7 @@ Attributions: get the link of the sound and image website you used and add it he
 - I will add audio functions on all of the category buttons.
 
 
+#
 
 
 

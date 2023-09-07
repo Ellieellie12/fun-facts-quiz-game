@@ -1,14 +1,20 @@
 h1 {
-  
+
   text-align: center;
   font-weight: 360;
   font-size: 45px;
-  cursor:pointer;
+  cursor: pointer;
 }
+
 h2 {
   text-align: center;
-  font-family:'Times New Roman', Times, serif;
-  cursor:pointer;
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+}
+h3 {
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -19,7 +25,7 @@ h2 {
   font-size: 25px;
   margin: 10px 10px;
   margin-left: auto;
-  
+
 
 }
 
@@ -43,16 +49,16 @@ div {
   font-size: 16px;
   background-color: snow;
   border-radius: 4px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #birds {
-color: red;
-margin: 30px;
-font-size: 16px;
-background-color: snow;
-border-radius: 4px;
-cursor:pointer;
+  color: red;
+  margin: 30px;
+  font-size: 16px;
+  background-color: snow;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 #fish {
@@ -61,7 +67,7 @@ cursor:pointer;
   font-size: 16px;
   background-color: snow;
   border-radius: 4px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 /* #trueocean {
@@ -75,71 +81,71 @@ cursor:pointer;
 .trueandfalseoceans {
   display: flex;
   flex-direction: row;
-  align-items:center;
+  align-items: center;
   justify-content: left;
 
 }
 
 #trueocean {
   color: blue;
-  font-size:16px ;
+  font-size: 16px;
   background-color: snow;
   border-radius: 4px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #falseocean {
-  color:blue;
-font-size:16px;
-background-color: snow;
-border-radius: 4px;
-cursor:pointer;
+  color: blue;
+  font-size: 16px;
+  background-color: snow;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 
 
 #truebird {
-  color:red;
-  font-size:16px;
+  color: red;
+  font-size: 16px;
   background-color: snow;
   border-radius: 4px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #falsebird {
-  color:red;
-  font-size:16px;
+  color: red;
+  font-size: 16px;
   background-color: snow;
   border-radius: 4px;
-  cursor:pointer;
+  cursor: pointer;
 
 }
 
-#truefish{
-color:green;
-font-size:16px;
-background-color: snow;
-border-radius: 4px;
-cursor:pointer;
+#truefish {
+  color: green;
+  font-size: 16px;
+  background-color: snow;
+  border-radius: 4px;
+  cursor: pointer;
 
 }
 
-#falsefish{
-color: green;
-font-size:16px;
-background-color: snow;
-border-radius: 4px;
-cursor:pointer;
+#falsefish {
+  color: green;
+  font-size: 16px;
+  background-color: snow;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 #resetbutton {
-  color:black;
+  color: black;
   display: flex;
   /* flex-direction: column; */
   align-items: center;
   justify-content: center;
-  margin: 20px 550px ;
+  margin: 20px 550px;
   border-radius: 4px;
-  background-color:snow;
-  cursor:pointer;
+  background-color: snow;
+  cursor: pointer;
 }

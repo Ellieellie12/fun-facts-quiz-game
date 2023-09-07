@@ -6,50 +6,72 @@ import { funFactsBirds } from "./fun-facts.js"
 /*-------------------------------- Constants --------------------------------*/
 const categoryChoices = ['ocean', 'birds', 'fish']
 const currentCategoryFacts = []
-const currentCategoryIndex = 0
+let currentCategoryIndex = 0
 /*---------------------------- Variables (state) ----------------------------*/
-let currentCategory, winner, score, randomIndex
-
-
+let currentCategory, winner, randomIndex
+let score = 0
 /*------------------------ Cached Element References ------------------------*/
+const scoreElement = document.getElementById('score')
+
 const oceanButton = document.getElementById('oceans')
 const birdsButton = document.getElementById('birds')
 const fishButton = document.getElementById('fish')
 
+const resetButton = document.getElementById('resetbutton')
 const messageResult = document.getElementById('messageEl')
+
 const trueButton = document.getElementById('trueocean')
 const falseButton = document.getElementById('falseocean')
+const trueAndFalseSections = document.querySelector('.trueandfalseoceans')
+console.log(trueAndFalseSections)
+//NEED TO MAKE TRUE AND FALSE BUTTONS FOR BIRDS AND FISH SO THAT I CAN KEEP TRACK OF THEIR SCORE
 const oceanImage = document.getElementById('oceansimg')
+
+// const oceanSays = new Audio("../audio/oceans.wav")
 // const nextFactDiv = document.getElementById('factEl')
 /*----------------------------- Event Listeners -----------------------------*/
-
+trueButton.addEventListener('click', () => {
+   checkAnswerOcean(true)
+})
+falseButton.addEventListener('click', () => {
+   checkAnswerOcean(notTrue)
+})
 
 oceanButton.addEventListener('click', createFunFactOcean)
 birdsButton.addEventListener('click', createFunFactBird)
 fishButton.addEventListener('click', createFunFactFish)
-// document.getElementById('birds').addEventListener('click', createFunFactBird)
-// document.getElementById('fish').addEventListener('click',play)
+
+resetButton.addEventListener('click', init)
+
 document.getElementById('trueocean').addEventListener('click', nextQuestionOne)
 document.getElementById('falseocean').addEventListener('click', nextQuestionOcean)
+
 document.getElementById('truebird').addEventListener('click', nextQuestionTwo)
-document.getElementById('falsebird').addEventListener('click',nextQuestionBirds)
+document.getElementById('falsebird').addEventListener('click', nextQuestionBirds)
+
 document.getElementById('truefish').addEventListener('click', nextQuestionThree)
-document.getElementById('falsefish').addEventListener('click',nextQuestionFish)
+document.getElementById('falsefish').addEventListener('click', nextQuestionFish)
 
-// oceanImage.addEventListener('click', function (evt) { // add audio files to this image or another one of the images and if possible see if you can add audio when hovering over text
-
+// oceanImage.addEventListener('click', function (evt) { 
+//   oceanSays.volume = 0.5
+//   oceanSays.play()
 // })
 /*-------------------------------- Functions --------------------------------*/
 function init() {
    winner = false
    score = 0
-   nextQuestionOne()
+   messageResult.innerHTML = ''
+   oceanImage.style.visibility = 'visible'
+   trueAndFalseSections.innerHTML = ''
+   updateScore()
    render()
 }
 
 
+
+
 function createFunFactOcean() {
-   oceansimg.style.visibility = 'hidden'
+   oceanImage.style.visibility = 'hidden'
    const fact = funFactsOceans[0]
    currentCategoryFacts.push(fact)
    messageResult.innerHTML = currentCategoryFacts[0].fact
@@ -58,7 +80,7 @@ function createFunFactOcean() {
 
 }
 
-function createFunFactBird(){
+function createFunFactBird() {
    birdsimg.style.visibility = 'hidden'
    const fact = funFactsBirds[0]
    currentCategoryFacts.push(fact)
@@ -67,7 +89,7 @@ function createFunFactBird(){
    falsebird.style.display = 'block'
 }
 
-function createFunFactFish (){
+function createFunFactFish() {
    fishimg.style.visibility = 'hidden'
    const fact = funFactsFish[0]
    currentCategoryFacts.push(fact)
@@ -80,7 +102,7 @@ function nextQuestionOne() {
    const random = randomFact()
    const oceanFact = funFactsOceans[random]
    messageResult.innerHTML = oceanFact.fact
-  
+
 }
 
 function nextQuestionOcean() {
@@ -96,20 +118,20 @@ function nextQuestionTwo() {
    messageResult.innerHTML = birdFact.fact
 }
 
-function nextQuestionBirds(){
+function nextQuestionBirds() {
    const random = randomFact()
    const birdFact = funFactsBirds[random]
    messageResult.innerHTML = birdFact.fact
 
 }
 
-function nextQuestionThree(){
+function nextQuestionThree() {
    const random = randomFact()
    const fishFact = funFactsFish[random]
    messageResult.innerHTML = fishFact.fact
 }
 
-function nextQuestionFish(){
+function nextQuestionFish() {
    const random = randomFact()
    const fishFact = funFactsFish[random]
    messageResult.innerHTML = fishFact.fact
@@ -118,6 +140,34 @@ function nextQuestionFish(){
 function randomFact() {
    return Math.floor(Math.random() * funFactsOceans.length)
 
+}
+
+function checkAnswerOcean(isTrue) {
+   if (currentCategoryIndex < funFactsOceans.length) {
+      const correctAnswer = funFactsOceans[currentCategoryIndex].isOceans
+      if (isTrue === correctAnswer) {
+         score++
+      }
+      currentCategoryIndex++
+      updateScore()
+   }
+}
+
+function checkAnswerOceanTwo(isFalse) {
+   if(currentCategoryIndex < funFactsOceans.length) {
+      const wrongAnswer = funFactsOceans[currentCategoryIndex].isOceans
+      if(isFalse === wrongAnswer) 
+      score--
+
+   }
+   currentCategoryIndex--
+   updateScore()
+
+}
+
+
+function updateScore() {
+   scoreElement.innerHTML = score
 }
 
 // function filterOutDuplicates(currentFact) {
@@ -143,7 +193,8 @@ function currentCategoryFact() {
 
 
 function render() {
-
+   // createFunFactOcean()
+   // nextQuestionOne()
 }
 
 
@@ -156,7 +207,7 @@ function render() {
 
 
 
-
+//NOTES FOR TOMORROW ADD A TIMER, SCORE BOARD, AUDIO, 
 
 
 
