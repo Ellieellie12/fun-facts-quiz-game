@@ -13,7 +13,7 @@ let currentCategory, winner, score, randomIndex
 
 /*------------------------ Cached Element References ------------------------*/
 const oceanButton = document.getElementById('oceans')
-// const birdsButton = document.getElementById('birds')
+const birdsButton = document.getElementById('birds')
 // const fishButton = document.getElementById('fish')
 
 const messageResult = document.getElementById('messageEl')
@@ -25,9 +25,9 @@ const oceanImage = document.getElementById('oceansimg')
 
 
 oceanButton.addEventListener('click', createFunFactOcean)
-
-// document.getElementById('birds').addEventListener('onClick',play)
-// document.getElementById('fish').addEventListener('onClick',play)
+birdsButton.addEventListener('click', createFunFactBird)
+// document.getElementById('birds').addEventListener('click', createFunFactBird)
+// document.getElementById('fish').addEventListener('click',play)
 document.getElementById('trueocean').addEventListener('click', nextQuestion)
 document.getElementById('falseocean').addEventListener('click', nextQuestionOcean)
 oceanImage.addEventListener('click', function (evt) {
@@ -50,6 +50,16 @@ function createFunFactOcean() {
    trueocean.style.display = 'block'
    falseocean.style.display = 'block'
 
+}
+
+function createFunFactBird(){
+   birdsimg.style.visibility = 'hidden'
+   const fact = funFactsBirds[0]
+   currentCategoryFacts.push(fact)
+   messageResult.innerHTML = currentCategoryFacts[0].fact
+   truebird.style.display = 'block'
+   falsebird.style.display = 'block'
+   //add the true and false display as well as buttons for this function
 }
 
 
