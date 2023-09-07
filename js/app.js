@@ -33,6 +33,9 @@ document.getElementById('trueocean').addEventListener('click', nextQuestionOne)
 document.getElementById('falseocean').addEventListener('click', nextQuestionOcean)
 document.getElementById('truebird').addEventListener('click', nextQuestionTwo)
 document.getElementById('falsebird').addEventListener('click',nextQuestionBirds)
+document.getElementById('truefish').addEventListener('click', nextQuestionThree)
+document.getElementById('falsefish').addEventListener('click',nextQuestionFish)
+
 // oceanImage.addEventListener('click', function (evt) { // add audio files to this image or another one of the images and if possible see if you can add audio when hovering over text
 
 // })
@@ -100,7 +103,17 @@ function nextQuestionBirds(){
 
 }
 
+function nextQuestionThree(){
+   const random = randomFact()
+   const fishFact = funFactsFish[random]
+   messageResult.innerHTML = fishFact.fact
+}
 
+function nextQuestionFish(){
+   const random = randomFact()
+   const fishFact = funFactsFish[random]
+   messageResult.innerHTML = fishFact.fact
+}
 
 function randomFact() {
    return Math.floor(Math.random() * funFactsOceans.length)
