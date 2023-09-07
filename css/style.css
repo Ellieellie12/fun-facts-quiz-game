@@ -3,10 +3,12 @@ h1 {
   text-align: center;
   font-weight: 360;
   font-size: 45px;
+  cursor:pointer;
 }
 h2 {
   text-align: center;
   font-family:'Times New Roman', Times, serif;
+  cursor:pointer;
 }
 
 .container {
@@ -41,6 +43,7 @@ div {
   font-size: 16px;
   background-color: snow;
   border-radius: 4px;
+  cursor:pointer;
 }
 
 #birds {
@@ -49,6 +52,7 @@ margin: 30px;
 font-size: 16px;
 background-color: snow;
 border-radius: 4px;
+cursor:pointer;
 }
 
 #fish {
@@ -57,6 +61,7 @@ border-radius: 4px;
   font-size: 16px;
   background-color: snow;
   border-radius: 4px;
+  cursor:pointer;
 }
 
 /* #trueocean {
@@ -72,6 +77,7 @@ border-radius: 4px;
   flex-direction: row;
   align-items:center;
   justify-content: left;
+
 }
 
 #trueocean {
@@ -79,6 +85,7 @@ border-radius: 4px;
   font-size:16px ;
   background-color: snow;
   border-radius: 4px;
+  cursor:pointer;
 }
 
 #falseocean {
@@ -86,6 +93,7 @@ border-radius: 4px;
 font-size:16px;
 background-color: snow;
 border-radius: 4px;
+cursor:pointer;
 }
 
 
@@ -95,7 +103,7 @@ border-radius: 4px;
   font-size:16px;
   background-color: snow;
   border-radius: 4px;
-
+  cursor:pointer;
 }
 
 #falsebird {
@@ -103,6 +111,7 @@ border-radius: 4px;
   font-size:16px;
   background-color: snow;
   border-radius: 4px;
+  cursor:pointer;
 
 }
 
@@ -111,6 +120,7 @@ color:green;
 font-size:16px;
 background-color: snow;
 border-radius: 4px;
+cursor:pointer;
 
 }
 
@@ -119,5 +129,17 @@ color: green;
 font-size:16px;
 background-color: snow;
 border-radius: 4px;
+cursor:pointer;
 }
 
+#resetbutton {
+  color:black;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  margin: 20px 550px ;
+  border-radius: 4px;
+  background-color:snow;
+  cursor:pointer;
+}
