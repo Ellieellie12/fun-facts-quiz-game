@@ -6,36 +6,59 @@ import { funFactsBirds } from "./fun-facts.js"
 /*-------------------------------- Constants --------------------------------*/
 const categoryChoices = ['ocean', 'birds', 'fish']
 const currentCategoryFacts = []
-let currentCategoryIndex = 0
+// let currentCategoryIndex = 0
 /*---------------------------- Variables (state) ----------------------------*/
 let currentCategory, winner, randomIndex
 let score = 0
+let currentCategoryIndex = 0
 /*------------------------ Cached Element References ------------------------*/
 const scoreElement = document.getElementById('score')
+const backgroundMusic = document.getElementById('gamemusic')
 
 const oceanButton = document.getElementById('oceans')
 const birdsButton = document.getElementById('birds')
 const fishButton = document.getElementById('fish')
 
+
 const resetButton = document.getElementById('resetbutton')
+
 const messageResult = document.getElementById('messageEl')
 
 const trueButton = document.getElementById('trueocean')
 const falseButton = document.getElementById('falseocean')
-const trueAndFalseSections = document.querySelector('.trueandfalseoceans')
-console.log(trueAndFalseSections)
+
+const trueButtonBird = document.getElementById('truebird')
+const falseButtonBird = document.getElementById('falsebird')
+
+const trueButtonFish = document.getElementById('truefish')
+const falseButtonFish = document.getElementById('falsefish')
+// const trueAndFalseSections = document.querySelector('.trueandfalseoceans')
+// console.log(trueAndFalseSections)
 //NEED TO MAKE TRUE AND FALSE BUTTONS FOR BIRDS AND FISH SO THAT I CAN KEEP TRACK OF THEIR SCORE
 const oceanImage = document.getElementById('oceansimg')
+const birdsImage = document.getElementById('birdsimg')
+const fishImage = document.getElementById('fishimg')
 
-// const oceanSays = new Audio("../audio/oceans.wav")
 // const nextFactDiv = document.getElementById('factEl')
 /*----------------------------- Event Listeners -----------------------------*/
 trueButton.addEventListener('click', () => {
    checkAnswerOcean(true)
 })
 falseButton.addEventListener('click', () => {
-   checkAnswerOcean(notTrue)
+   checkAnswerOceanTwo(notTrue)
 })
+
+// trueButton.addEventListener('click', function() {
+//    checkAnswerOcean(true)
+//    score = score + 1
+//    console.log(score)
+// })
+
+// falseButton.addEventListener('click', function() {
+   
+// })
+
+
 
 oceanButton.addEventListener('click', createFunFactOcean)
 birdsButton.addEventListener('click', createFunFactBird)
@@ -58,14 +81,36 @@ document.getElementById('falsefish').addEventListener('click', nextQuestionFish)
 // })
 /*-------------------------------- Functions --------------------------------*/
 function init() {
+   // clearEverything()
+
    winner = false
    score = 0
    messageResult.innerHTML = ''
    oceanImage.style.visibility = 'visible'
-   trueAndFalseSections.innerHTML = ''
+   birdsImage.style.visibility = 'visible'
+   fishImage.style.visibility = 'visible'
+   trueButton.style.display = 'none'
+   falseButton.style.display = 'none'
+   trueButtonBird.style.display = 'none'
+   falseButtonBird.style.display = 'none'
+   trueButtonFish.style.display = 'none'
+   falseButtonFish.style.display = 'none'
+   playBackgroundMusic()
+   // createFunFactOcean()
    updateScore()
    render()
 }
+
+function playBackgroundMusic() {
+backgroundMusic.play() 
+}
+
+
+// setTimeout(function() {
+//    backgroundMusic.play
+//    backgroundMusic.pause()
+// }, 3000)
+
 
 
 
@@ -75,27 +120,28 @@ function createFunFactOcean() {
    const fact = funFactsOceans[0]
    currentCategoryFacts.push(fact)
    messageResult.innerHTML = currentCategoryFacts[0].fact
-   trueocean.style.display = 'block'
-   falseocean.style.display = 'block'
+   trueButton.style.display = 'block'
+   falseButton.style.display = 'block'
+   
 
 }
 
 function createFunFactBird() {
-   birdsimg.style.visibility = 'hidden'
+   birdsImage.style.visibility = 'hidden'
    const fact = funFactsBirds[0]
    currentCategoryFacts.push(fact)
    messageResult.innerHTML = currentCategoryFacts[0].fact
-   truebird.style.display = 'block'
-   falsebird.style.display = 'block'
+   trueButtonBird.style.display = 'block'
+   falseButtonBird.style.display = 'block'
 }
 
 function createFunFactFish() {
-   fishimg.style.visibility = 'hidden'
+   fishImage.style.visibility = 'hidden'
    const fact = funFactsFish[0]
    currentCategoryFacts.push(fact)
    messageResult.innerHTML = currentCategoryFacts[0].fact
-   truefish.style.display = 'block'
-   falsefish.style.display = 'block'
+   trueButtonFish.style.display = 'block'
+   falseButtonFish.style.display = 'block'
 }
 
 function nextQuestionOne() {
@@ -152,19 +198,30 @@ function checkAnswerOcean(isTrue) {
       updateScore()
    }
 }
+// messageResult.textContent = 'the'
+function clearEverything() {
+   score = 0
+   messageResult.textContent = ''
 
-// function checkAnswerOceanTwo(isFalse) {
-//    if(currentCategoryIndex < funFactsOceans.length) {
-//       const wrongAnswer = funFactsOceans[currentCategoryIndex].isOceans
-//       if(isFalse === wrongAnswer) 
-//       score--
+}
 
-//    }
-//    currentCategoryIndex--
-//    updateScore()
+// function checkOceans() {
 
 // }
 
+
+
+function checkAnswerOceanTwo(isFalse) {
+   if (currentCategoryIndex < funFactsOceans.length) {
+      const wrongAnswer = funFactsOceans[currentCategoryIndex].isOceans
+      if (isFalse === wrongAnswer) {
+        -- score
+   }
+   currentCategoryIndex--
+   updateScore()
+
+  }
+}
 
 function updateScore() {
    scoreElement.innerHTML = score
@@ -182,17 +239,11 @@ function playerScore() {
    //if else statement
 }
 
-function randomFunFactOceans() {
 
-}
-
-
-function currentCategoryFact() {
-
-}
 
 
 function render() {
+   // playBackgroundMusic()
    // createFunFactOcean()
    // nextQuestionOne()
 }

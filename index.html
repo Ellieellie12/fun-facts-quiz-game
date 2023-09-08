@@ -16,20 +16,22 @@
   <h1>How Well Do You Know These Facts?</h1>
   <h2> Pick A Category:</h2>
   <h3> Score: <span id="score">0</span></h3>
-
+  <audio id="gamemusic" src="./js/audio/ocean.wav" type="audio" loop preload="auto" volume=".05"></audio>
   <!-- <div id="winner">Winner!!!</div>
   <div id="loser">You Lost, Try Again!!!</div> -->
 
   <section class="container">
-  <div> <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_1280.jpg" alt="photo of the ocean in the maldives" width="300" id="oceansimg"></div>
-  <div> <img src="https://cdn.pixabay.com/photo/2015/02/16/15/29/rainbow-lorikeet-638413_1280.jpg" alt="a red bird and an orange blue and green bird sitting together" width ="300" id = "birdsimg"> </div>
-  <div><img src="https://cdn.pixabay.com/photo/2016/11/29/09/43/koi-fish-1868779_1280.jpg" alt="school of khoi fish in the water" width ="300" id= "fishimg"></div>
+  <div id="oceanDiv"> <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_1280.jpg" alt="photo of the ocean in the maldives" width="300" id="oceansimg"></div>
+  <div id="birdsDiv"> <img src="https://cdn.pixabay.com/photo/2015/02/16/15/29/rainbow-lorikeet-638413_1280.jpg" alt="a red bird and an orange blue and green bird sitting together" width ="300" id = "birdsimg"> </div>
+  <div id="fishDiv"><img src="https://cdn.pixabay.com/photo/2016/11/29/09/43/koi-fish-1868779_1280.jpg" alt="school of khoi fish in the water" width ="300" id= "fishimg"></div>
   </section>
-
+<section class="displayfunfacts">
   <div id = "messageEl"></div>
+  </section>
   <!-- <div id = "messageBirds"></div> to display bird fun facts -->
   <!-- <div id ="messageFish"></div> to display fish fun facts -->
   <div id ="factEl"></div>
+
 <section class="trueandfalseoceans">
   <button id ="trueocean" type ="button" hidden = "hidden">True</button>
   <button id ="falseocean" type ="button" hidden="hidden">False</button>
@@ -51,10 +53,8 @@
   <button id="fish" type="button">Fish</button>
 </div>
 
-<button id="resetbutton" type="button">New Game</button>
+<button id="resetbutton" type="button">Reset Game</button>
+ 
 
-
-<!-- 
-<embed src =audio loop="true" autostart="true" volume=0.5></embed> -->
 </body>
 </html>
