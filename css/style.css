@@ -1,5 +1,4 @@
 h1 {
-
   text-align: center;
   font-weight: 360;
   font-size: 45px;
@@ -11,10 +10,21 @@ h2 {
   font-family: 'Times New Roman', Times, serif;
   cursor: pointer;
 }
+
 h3 {
   display:flex;
   align-items: center;
   justify-content: center;
+}
+
+#countdown {
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .displayfunfacts {
@@ -22,18 +32,12 @@ h3 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
 }
 
-/* body {background-color: #3eb2a8;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23473b5a' fill-opacity='0.62' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); */
+body {background-color: #3eb2a8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23473b5a' fill-opacity='0.62' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); 
+ }
 
-/* } */
-
-body {
-  background-color: #69665b;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23e6dff4' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-}
 .container {
   display: flex;
   flex-direction: row;
@@ -42,8 +46,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   font-size: 25px;
   margin: 10px 10px;
   margin-left: auto;
-
-
 }
 
 div {
@@ -55,9 +57,6 @@ div {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* padding: 10px 10px 10px 10px; */
-  /* margin:  */
-
 }
 
 #oceans {
@@ -87,14 +86,6 @@ div {
   cursor: pointer;
 }
 
-/* #trueocean {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-} */
-
 .trueandfalseoceans {
   display: flex;
   flex-direction: row;
@@ -118,8 +109,6 @@ div {
   border-radius: 4px;
   cursor: pointer;
 }
-
-
 
 #truebird {
   color: red;
