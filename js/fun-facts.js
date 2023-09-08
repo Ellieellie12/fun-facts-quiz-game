@@ -21,12 +21,6 @@ const funFactsOceans = [
   { isOceans: false, fact: "The Ocean doesn't regulate the climate of the world." }
 ]
 
-// function getRandomFunFactOcean() {
-//   return funFactOceans[Math.floor(Math.random() * getRandomFunFactOcean.length)]
-// }
-
-
-
 
 const funFactsBirds = [
   { isBirds: true, fact: "There are more than 18,000 bird species in the world." },
@@ -49,12 +43,6 @@ const funFactsBirds = [
   { isBirds: false, fact: "You can find red cardinals all over Europe." },
   { isBirds: false, fact: "Birds are mammals." }
 ]
-
-// function getRandomFunFactBird() {
-//   return funFactBirds[Math.floor(Math.random() * getRandomFunFactBird.length)]
-// }
-
-
 
 
 const funFactsFish = [
@@ -80,15 +68,8 @@ const funFactsFish = [
   { isFish: false, fact: "Fish come in one size and color." }
 ]
 
-// function getRandomFunFactFish() {
-//   return funFactFish[Math.floor(Math.random() * getRandomFunFactFish.length)]
-// }
-
 export {
   funFactsFish,
   funFactsOceans,
   funFactsBirds
 }
-
-
-//NOTES: CHANGE ALL SINGLE QUOTES IN THIS DATA TO DOUBLE 
