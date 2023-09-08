@@ -144,14 +144,14 @@ div {
   cursor: pointer;
 }
 
-#resetbutton {
+.resetbutton {
   color: black;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 20px 550px;
+  margin: 20px 560px;
   border-radius: 4px;
-  background-color: snow;
+  /* background-color: snow; */
   cursor: pointer;
 }

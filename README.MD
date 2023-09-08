@@ -1,21 +1,29 @@
 # Fun Fact Quiz Game
-
+![photograph of fun fact quiz game with 3 categories which includes oceans, birds, and fish](<js/images/fun quiz game.png>)
 ## How Well Do You Know These Facts?
-Description: Fun Facts Quiz Game is a game created for children to have fun while they learn. Over 60 fun facts are 
+Description: Fun Facts Quiz Game is a game created for children to have fun while they learn. Over 60 fun facts with a great selection of categories to choose from. 
 
-
-Why I chose this game: I chose to make this quiz game for children so that they would have a nice experience while they're learning new facts about the world.
+* The reason I chose this game because I wanted to create a way for children to learn but in fun way. It's not just a game that can be played alone you are able to sit with a friend and try to figure out the correct answers and that allows for more than one person to gain knowledge.
 
 ## Getting Started:
 Click to play the game: https://fun-fact-quiz-game.netlify.app/
  
- 
+ * Rules of the Game:
+
+ 1. At the start of the game the player is given 3 categories: Oceans, Birds, & Fish
+
+2. The Player picks a category and the timer begins to count down from 40 seconds giving them only 40 seconds to answer all 10 fun facts.
+
+3. The Player is able to gain points if they get the answer correct or receive no points if they answer incorrectly. 
+
+4. When the timer goes off the player  will be told if they won the game or not. If they get all 10 of the fun facts correct they won but if they have scored less than 10 they lost.
+
+4. The player now has the opportunity to click the reset button to refresh the game and play another round.
+
 ## Attributions: 
 1. https://freesound.org/
 2. https://heropatterns.com/
 3. https://pixabay.com/
-
-
 
 ## Technologies Used: 
 1. Javascript
