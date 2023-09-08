@@ -12,7 +12,7 @@ h2 {
 }
 
 h3 {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -28,15 +28,19 @@ h3 {
 }
 
 .displayfunfacts {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-body {background-color: #3eb2a8;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23473b5a' fill-opacity='0.62' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); 
- }
+body {
+  background-color: #3eb2a8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23473b5a' fill-opacity='0.62' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
 
 .container {
   display: flex;
@@ -153,8 +157,11 @@ div {
   margin: 20px 560px;
   border-radius: 4px;
   cursor: pointer;
+
 }
+
 #resetbutton {
   background-color: snow;
   cursor: pointer;
+
 }
