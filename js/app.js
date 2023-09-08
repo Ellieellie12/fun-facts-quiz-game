@@ -1,15 +1,15 @@
 import { funFactsFish } from "./fun-facts.js"
 import { funFactsOceans } from "./fun-facts.js"
 import { funFactsBirds } from "./fun-facts.js"
-
+/*-------------------------------- Constants --------------------------------*/
 const categoryChoices = ['ocean', 'birds', 'fish']
 const currentCategoryFacts = []
-
+/*---------------------------- Variables (state) ----------------------------*/
 let currentCategory, winner, randomIndex
 let score = 0
 let currentCategoryIndex = 0
 let timeLeft = 40
-
+/*------------------------ Cached Element References ------------------------*/
 const scoreElement = document.getElementById('score')
 const backgroundMusic = document.getElementById('gamemusic')
 const countDownEl = document.getElementById('countdown')
@@ -27,7 +27,7 @@ const falseButtonFish = document.getElementById('falsefish')
 const oceanImage = document.getElementById('oceansimg')
 const birdsImage = document.getElementById('birdsimg')
 const fishImage = document.getElementById('fishimg')
-
+/*----------------------------- Event Listeners -----------------------------*/
 
 trueButton.addEventListener('click', () => {
    checkAnswerOcean(true)
@@ -44,6 +44,7 @@ document.getElementById('falsebird').addEventListener('click', nextQuestionBirds
 document.getElementById('truefish').addEventListener('click', nextQuestionThree)
 document.getElementById('falsefish').addEventListener('click', nextQuestionFish)
 
+/*-------------------------------- Functions --------------------------------*/
 
 function init() {
    winner = false
