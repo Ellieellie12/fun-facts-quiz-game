@@ -20,7 +20,7 @@ Click to play the game: https://fun-fact-quiz-game.netlify.app/
 
 4. The player now has the opportunity to click the reset button to refresh the game and play another round.
 
-## Planning Materials: 
+## Planning Materials: https://docs.google.com/document/d/1xlyt8k80uL8ruvw8gmAkv7gmJPL6QPHAuEeivT9yHus/edit?usp=sharing
 
 ## Attributions: 
 1. https://freesound.org/
@@ -28,7 +28,7 @@ Click to play the game: https://fun-fact-quiz-game.netlify.app/
 3. https://pixabay.com/
 
 ## Technologies Used: 
-1. Javascript
+1. JavaScript
 2. CSS
 3. HTML
 
