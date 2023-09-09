@@ -10,15 +10,17 @@ Click to play the game: https://fun-fact-quiz-game.netlify.app/
  
  * Rules of the Game:
 
- 1. At the start of the game the player is given 3 categories: Oceans, Birds, & Fish
+ 1. At the start of the game the player is given 3 categories: Oceans, Birds, & Fish.
 
-2. The Player picks a category and the timer begins to count down from 40 seconds giving them only 40 seconds to answer all 10 fun facts.
+2. The player picks a category and the timer begins to count down from 40 seconds giving them only 40 seconds to answer all 10 fun facts.
 
-3. The Player is able to gain points if they get the answer correct or receive no points if they answer incorrectly. 
+3. The player is able to gain points if they get the answer correct or receive no points if they answer incorrectly. 
 
 4. When the timer goes off the player  will be told if they won the game or not. If they get all 10 of the fun facts correct they won but if they have scored less than 10 they lost.
 
 4. The player now has the opportunity to click the reset button to refresh the game and play another round.
+
+## Planning Materials: 
 
 ## Attributions: 
 1. https://freesound.org/
@@ -31,8 +33,8 @@ Click to play the game: https://fun-fact-quiz-game.netlify.app/
 3. HTML
 
 ## Future Plans For The Game:
-- Add 7 more categories to the game.
-- Go more in depth with the fun facts that are given.
-- Add difficulty levels to the game.
-- Add audio function to all buttons.
+- Add 7 more categories to the game
+- Go more in depth with the fun facts that are given
+- Add difficulty levels to the game
+- Add audio function to all buttons
 - Add more CSS styling
