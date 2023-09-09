@@ -6,25 +6,51 @@
   <title>Fun Facts</title>
   <script type="module" src="./js/app.js"></script>
   <link rel="stylesheet" href="css/style.css">
-  <link id="favicon" 
+  <!-- <link id="favicon" 
          rel="icon" 
          href="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
          type="image.jpg"
-         sizes="32x32">
+         sizes="32x32"> -->
 </head>
   <body>
-    <h1>How Well Do You Know These Facts?</h1>
-    <!-- <h3> Score: <span id="score">0</span></h3> -->
+    <div class="header"> How Well Do You Know These Facts? </div>
+      <div id="scoreandtimer">
+      <div class="score"> Score </div>
+      <div class="timer"> Timer </div>
+      </div>
+      <div id="resetbutton"> <button class="newgame"> New Game</button> </div>
+      <section id="categoryimages">
+        <div class="oceansimg"> oceans image</div>
+        <div class="birdsimg"> birds image </div>
+        <div class="fishimg"> fish image</div>
+      </section>
+      <div id="categorybuttons">
+        <button class="oceansbutton">Oceans</button>
+        <button class="birdsbutton">Birds</button>
+        <button class="fishbutton">Fish</button>
+      </div>
+      </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <h3> Score: <span id="score">0</span></h3> -->
     <!-- <div id="countdown"></div> -->
     <!-- <audio id="gamemusic" src="./js/audio/ocean.wav" type="audio" loop preload="auto" volume=".05"></audio> -->
-    <section class="container">
+    <!-- <section class="container">
       <div id="oceanDiv"> <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_1280.jpg" alt="photo of the ocean in the maldives" width="300" id="oceansimg"></div>
       <div id="birdsDiv"> <img src="https://cdn.pixabay.com/photo/2015/02/16/15/29/rainbow-lorikeet-638413_1280.jpg" alt="a red bird and an orange blue and green bird sitting together" width ="300" id = "birdsimg"> </div>
       <div id="fishDiv"><img src="https://cdn.pixabay.com/photo/2016/11/29/09/43/koi-fish-1868779_1280.jpg" alt="school of khoi fish in the water" width ="300" id= "fishimg"></div>
     </section>
     <section class="displayfunfacts">
       <div id = "messageEl"></div>
-    </section>
+    </section> -->
 
     <!-- <section class="trueandfalseoceans">
       <button id ="trueocean" type ="button" hidden = "hidden">True</button>
@@ -41,14 +67,14 @@
       <button id ="falsefish" type="button" hidden = "hidden">False</button>
     </section> -->
 
-    <div class="categorybuttons">
-      <button id="oceans" type="button"> Oceans</button>
-      <button id="birds" type="button"> Birds</button>
-      <button id="fish" type="button">Fish</button>
-    </div>
+    <!-- <div class="categoryoceans">
+    <button id="oceans" type="button"> Oceans</button>
+    </div> -->
+    <!-- <div class="categorybuttons">
+      <button id="oceans" type="button" class="categoryocean"> Oceans</button>
+      <button id="birds" type="button" class="categorybirds"> Birds</button>
+      <button id="fish" type="button" class="categoryfish">Fish</button> -->
+    <!-- </div> -->
 
-    <div class="resetbutton">
-     <button id="resetbutton" type="button">Reset Game</button>
-    </div>
-  </body>
-</html>
+    <!-- <div class="resetbutton">
+     <button id="resetbutton" type="button">Reset Game</button> -->
