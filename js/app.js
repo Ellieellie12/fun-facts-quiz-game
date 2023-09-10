@@ -57,6 +57,7 @@ oceanButton.addEventListener('click', play)
 function play() {
   score = 0
   timeLeft = 40
+  deleteImages()
 // console.log(score)
 // console.log(timeLeft)
 }
@@ -76,8 +77,11 @@ function printTimer() {
 
 printTimer()
 
-function deleteImages(){
 
+function deleteImages() {
+  oceanImage.style.visibility = 'hidden'
+  birdsImage.style.visibility = 'hidden'
+  fishImage.style.visibility = 'hidden'
 }
 
 
