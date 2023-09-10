@@ -3,13 +3,16 @@ import { funFactsOceans } from "./fun-facts.js"
 import { funFactsBirds } from "./fun-facts.js"
 /*-------------------------------- Constants --------------------------------*/
 
-
-
+// console.log(funFactsBirds)
+// console.log(funFactsOceans)
+// console.log(funFactsFish)
+const minute = '00'
 
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-
+let score = 0
+let timeLeft = 0
 
 
 
@@ -17,17 +20,31 @@ import { funFactsBirds } from "./fun-facts.js"
 
 
 /*------------------------ Cached Element References ------------------------*/
+const oceanButton = document.querySelector('.oceansbutton')
+// console.log(oceanButton)
+const birdsButton = document.querySelector('.birdsbutton')
+// console.log(birdsButton)
+const fishButton = document.querySelector('.fishbutton')
+// console.log(fishButton)
+const scoreElement = document.querySelector('.score')
+// console.log(score)
+const timerElement = document.querySelector('.timer')
+// console.log(timer)
+const resetButton = document.querySelector('.resetbutton')
+// console.log(resetButton)
 
-
-
-
-
+const oceanImage = document.querySelector('.oceansimg')
+console.log(oceanImage)
+const birdsImage = document.querySelector('.birdsimg')
+console.log(birdsImage)
+const fishImage = document.querySelector('.fishimg')
+console.log(fishImage)
 
 
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-
+oceanButton.addEventListener('click', play)
 
 
 
@@ -37,11 +54,31 @@ import { funFactsBirds } from "./fun-facts.js"
 
 /*-------------------------------- Functions --------------------------------*/
 
+function play() {
+  score = 0
+  timeLeft = 40
+// console.log(score)
+// console.log(timeLeft)
+}
+play()
 
+function printScore() {
+  scoreElement.textContent = `${score}`
+  
 
+}
+printScore()
+// console.log(scoreElement)
 
+function printTimer() {
+  timerElement.textContent = `${minute} : ${timeLeft}` 
+}
 
+printTimer()
 
+function deleteImages(){
+
+}
 
 
 
@@ -129,31 +166,31 @@ import { funFactsBirds } from "./fun-facts.js"
 // let currentCategoryIndex = 0
 // // let timeLeft = 40
 // /*------------------------ Cached Element References ------------------------*/
-// const scoreElement = document.getElementById('score')
-// const backgroundMusic = document.getElementById('gamemusic')
+// const scoreElement = document.querySelector('score')
+// const backgroundMusic = document.querySelector('gamemusic')
 
-// const countDownEl = document.getElementById('countdown')
+// const countDownEl = document.querySelector('countdown')
 
-// const oceanButton = document.getElementById('oceans')
-// const birdsButton = document.getElementById('birds')
-// const fishButton = document.getElementById('fish')
+// const oceanButton = document.querySelector('oceans')
+// const birdsButton = document.querySelector('birds')
+// const fishButton = document.querySelector('fish')
 
-// const resetButton = document.getElementById('resetbutton')
+// const resetButton = document.querySelector('resetbutton')
 
-// const messageResult = document.getElementById('messageEl')
+// const messageResult = document.querySelector('messageEl')
 
-// const trueButton = document.getElementById('trueocean')
-// const falseButton = document.getElementById('falseocean')
+// const trueButton = document.querySelector('trueocean')
+// const falseButton = document.querySelector('falseocean')
 
-// const trueButtonBird = document.getElementById('truebird')
-// const falseButtonBird = document.getElementById('falsebird')
+// const trueButtonBird = document.querySelector('truebird')
+// const falseButtonBird = document.querySelector('falsebird')
 
-// const trueButtonFish = document.getElementById('truefish')
-// const falseButtonFish = document.getElementById('falsefish')
+// const trueButtonFish = document.querySelector('truefish')
+// const falseButtonFish = document.querySelector('falsefish')
 
-// const oceanImage = document.getElementById('oceansimg')
-// const birdsImage = document.getElementById('birdsimg')
-// const fishImage = document.getElementById('fishimg')
+// const oceanImage = document.querySelector('oceansimg')
+// const birdsImage = document.querySelector('birdsimg')
+// const fishImage = document.querySelector('fishimg')
 // /*----------------------------- Event Listeners -----------------------------*/
 
 // trueButton.addEventListener('click', () => {
@@ -165,14 +202,14 @@ import { funFactsBirds } from "./fun-facts.js"
 // fishButton.addEventListener('click', createFunFactFish)
 // resetButton.addEventListener('click', init)
 
-// document.getElementById('trueocean').addEventListener('click', nextQuestionOne)
-// document.getElementById('falseocean').addEventListener('click', nextQuestionOcean)
+// document.querySelector('trueocean').addEventListener('click', nextQuestionOne)
+// document.querySelector('falseocean').addEventListener('click', nextQuestionOcean)
 
-// document.getElementById('truebird').addEventListener('click', nextQuestionTwo)
-// document.getElementById('falsebird').addEventListener('click', nextQuestionBirds)
+// document.querySelector('truebird').addEventListener('click', nextQuestionTwo)
+// document.querySelector('falsebird').addEventListener('click', nextQuestionBirds)
 
-// document.getElementById('truefish').addEventListener('click', nextQuestionThree)
-// document.getElementById('falsefish').addEventListener('click', nextQuestionFish)
+// document.querySelector('truefish').addEventListener('click', nextQuestionThree)
+// document.querySelector('falsefish').addEventListener('click', nextQuestionFish)
 
 // /*-------------------------------- Functions --------------------------------*/
 
