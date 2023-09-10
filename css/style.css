@@ -77,6 +77,14 @@ div {
   font-size: 25px;
 }
 
+#trueandfalse {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  width: 200px;
+  
+}
+
 
 
 

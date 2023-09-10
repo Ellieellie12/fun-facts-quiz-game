@@ -16,6 +16,7 @@ let timeLeft = 0
 let funFact 
 let trueButton 
 let falseButton
+let trueAndFalse
 
 
 
@@ -66,6 +67,7 @@ function play() {
   deleteImages()
   deleteButtons()
   displayOceanFunFact()
+  createTrueAndFalseButtons()
   // console.log(score)
   // console.log(timeLeft)
   console.log(funFactElement)
@@ -115,11 +117,30 @@ function displayOceanFunFact() {
 // console.log(funFact.fact)
 
 function createTrueAndFalseButtons() {
+  //create true and false buttons for user to access
 trueButton = document.createElement('button')
 falseButton = document.createElement('button')
+trueAndFalse = document.createElement('div')
+trueAndFalse.setAttribute('id','trueandfalse')
+
+
+// give buttons a value text appears on the button
+trueButton.textContent = 'true'
+falseButton.textContent = 'false'
+// giving each button an id
+trueButton.setAttribute('id','truebtn')
+falseButton.setAttribute('id','falsebtn')
+// display the buttons to the user in the images section
+trueAndFalse.appendChild(trueButton)
+trueAndFalse.appendChild(falseButton)
+funFactElement.appendChild(trueAndFalse)
+funFactElement.style.flexDirection = 'column'
+funFactElement.style.justifyContent = 'center'
+funFactElement.style.alignItems = 'center'
 
 }
-createTrueAndFalseButtons()
+console.log(trueAndFalse)
+// createTrueAndFalseButtons()
 console.log(trueButton)
 console.log(falseButton)
 
