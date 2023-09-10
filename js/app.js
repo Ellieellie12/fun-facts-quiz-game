@@ -13,6 +13,9 @@ const minute = '00'
 /*---------------------------- Variables (state) ----------------------------*/
 let score = 0
 let timeLeft = 0
+let funFact 
+let trueButton 
+let falseButton
 
 
 
@@ -40,7 +43,8 @@ console.log(birdsImage)
 const fishImage = document.querySelector('.fishimg')
 console.log(fishImage)
 
-
+const funFactElement = document.querySelector('#categoryimages')
+// console.log(funFactElement)
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -58,24 +62,28 @@ function play() {
   // initializes score and them time left when the game begins 
   score = 0
   timeLeft = 40
+  printTimer()
   deleteImages()
   deleteButtons()
-// console.log(score)
-// console.log(timeLeft)
+  displayOceanFunFact()
+  // console.log(score)
+  // console.log(timeLeft)
+  console.log(funFactElement)
 }
+
 
 
 function printScore() {
   // prints score only when user initializes the game 
   scoreElement.textContent = `${score}`
-  
+
 
 }
 printScore()
 // console.log(scoreElement)
 
 function printTimer() {
-  timerElement.textContent = `${minute} : ${timeLeft}` 
+  timerElement.textContent = `${minute} : ${timeLeft}`
 }
 
 printTimer()
@@ -83,10 +91,10 @@ printTimer()
 
 function deleteImages() {
   // when category button is clicked all images delete 
-  oceanImage.style.visibility = 'hidden'
-  birdsImage.style.visibility = 'hidden'
-  fishImage.style.visibility = 'hidden'
-  
+  oceanImage.remove()
+  birdsImage.remove()
+  fishImage.remove()
+
 }
 
 function deleteButtons() {
@@ -95,8 +103,25 @@ function deleteButtons() {
   fishButton.style.visibility = 'hidden'
 }
 
-// function displayOceanFunFact
+function displayOceanFunFact() {
+  // selecting random fun fact from funFactOceans array
+  funFact = funFactsOceans[Math.floor(Math.random() * funFactsOceans.length)]
+  // (oceanButton.click()){
+    // display only one funFact text 
+    funFactElement.textContent = funFact.fact
+}
 
+// displayOceanFunFact()
+// console.log(funFact.fact)
+
+function createTrueAndFalseButtons() {
+trueButton = document.createElement('button')
+falseButton = document.createElement('button')
+
+}
+createTrueAndFalseButtons()
+console.log(trueButton)
+console.log(falseButton)
 
 
 
