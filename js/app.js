@@ -55,15 +55,18 @@ oceanButton.addEventListener('click', play)
 /*-------------------------------- Functions --------------------------------*/
 
 function play() {
+  // initializes score and them time left when the game begins 
   score = 0
   timeLeft = 40
   deleteImages()
+  deleteButtons()
 // console.log(score)
 // console.log(timeLeft)
 }
-play()
+
 
 function printScore() {
+  // prints score only when user initializes the game 
   scoreElement.textContent = `${score}`
   
 
@@ -79,12 +82,20 @@ printTimer()
 
 
 function deleteImages() {
+  // when category button is clicked all images delete 
   oceanImage.style.visibility = 'hidden'
   birdsImage.style.visibility = 'hidden'
   fishImage.style.visibility = 'hidden'
+  
 }
 
+function deleteButtons() {
+  oceanButton.style.visibility = 'hidden'
+  birdsButton.style.visibility = 'hidden'
+  fishButton.style.visibility = 'hidden'
+}
 
+// function displayOceanFunFact
 
 
 
