@@ -12,18 +12,15 @@ const minute = '00'
 
 /*---------------------------- Variables (state) ----------------------------*/
 let score = 0
-let timer 
+let timer
 let timeLeft = 0
 let funFact
 let trueButton = document.createElement('button')
 let falseButton = document.createElement('button')
 let trueAndFalse
 
-let trueOrFalse 
-
-
-
-// let buttonClicked
+let trueOrFalse
+// let winner 
 
 
 
@@ -53,7 +50,7 @@ const fishImage = document.querySelector('.fishimg')
 const funFactElement = document.querySelector('#categoryimages')
 // console.log(funFactElement)
 
-
+const messageElement = document.querySelector('.message')
 /*----------------------------- Event Listeners -----------------------------*/
 oceanButton.addEventListener('click', play)
 
@@ -84,6 +81,7 @@ function play() {
   // displayOceanFunFact()
   // createTrueAndFalseButtons()
   render()
+  
   // checkForTrueAndFalse()
   // console.log(score)
   // console.log(timeLeft)
@@ -96,6 +94,7 @@ function render() {
   deleteButtons()
   displayOceanFunFact()
   createTrueAndFalseButtons()
+  checkForWinner()
 
 }
 
@@ -104,7 +103,6 @@ function printScore() {
   // prints score only when user initializes the game 
   scoreElement.textContent = `${score}`
 
-
 }
 // printScore()
 // console.log(scoreElement)
@@ -112,21 +110,27 @@ function printScore() {
 function printTimer() {
   timerElement.textContent = `${minute} : ${timeLeft}`
   timeLeft = 20
-  timer = setInterval(function() {
+  timer = setInterval(function () {
     timerElement.textContent = timeLeft + ' seconds remaining '
     timeLeft -= 1
     timerElement.textContent = `${minute} : ${timeLeft}`
-  if (timeLeft < 1) {
-    clearInterval(timer) 
-  }
+    if (timeLeft < 1) {
+      clearInterval(timer)
+    }
   }, 1000)
-
-  
-
 }
+
 
 // printTimer()
 
+
+function checkForWinner() {
+  if(score >= 10) {
+    messageElement.textContent = 'Winner!!!'
+  } else if(timeLeft === 0) {
+    messageElement.textContent = 'You Lose! Try Again!'
+  }
+}
 
 // // let timer = setInterval(function () {
 // //    countDownEl.textContent = timeLeft + ' seconds remaining '
@@ -193,26 +197,26 @@ function checkForFalseClick() {
   //   falseButton.disabled = true
   //   // console.log(trueOrFalse)
   // }
-     trueOrFalse = false
-     trueButton.disabled = true
-    //  console.log(trueOrFalse)
-  if(trueOrFalse == funFact.isCorrect) score++
+  trueOrFalse = false
+  trueButton.disabled = true
+  //  console.log(trueOrFalse)
+  if (trueOrFalse == funFact.isCorrect) score++
 
   // if(trueOrFalse == funFact.isCorrect)
   // score++
   // console.log(trueOrFalse)
   // console.log(score)
   // if(trueOrFalse)
-    printScore()
-    displayOceanFunFact()
-    createTrueAndFalseButtons()
-    enableTrueAndFalse()
+  printScore()
+  displayOceanFunFact()
+  createTrueAndFalseButtons()
+  enableTrueAndFalse()
 }
 
-function checkForTrueClick(){
-    trueOrFalse = true 
-    falseButton.disabled = true
-  if(trueOrFalse == funFact.isCorrect) score++
+function checkForTrueClick() {
+  trueOrFalse = true
+  falseButton.disabled = true
+  if (trueOrFalse == funFact.isCorrect) score++
   printScore()
   displayOceanFunFact()
   createTrueAndFalseButtons()
@@ -221,7 +225,7 @@ function checkForTrueClick(){
   // console.log(funFact.isCorrect)
   // console.log(score)
   // console.log(trueOrFalse)
-enableTrueAndFalse()
+  enableTrueAndFalse()
 }
 
 // checkForTrueClick()
@@ -230,6 +234,25 @@ function enableTrueAndFalse() {
   trueButton.disabled = false
   falseButton.disabled = false
 }
+
+
+
+
+
+// function checkForWinner(){
+  
+//   if(score >= 10) {
+//     timerElement.textContent = 'Winner!!!'
+//   } else if(score <= 9) {
+//     timerElement.textContent = 'You Lose! Try Again'
+//   } else if(timeLeft = 0) {
+//     timerElement.textContent = 'You Lose! Try Again'
+
+//   }
+// }
+  // (checkForWinner)
+
+
 
 
 
