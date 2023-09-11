@@ -77,18 +77,26 @@ function play() {
   // initializes score and them time left when the game begins 
   score = 0
   timeLeft = 40
-  printTimer()
-  deleteImages()
-  deleteButtons()
-  displayOceanFunFact()
-  createTrueAndFalseButtons()
-
+  // printTimer()
+  // deleteImages()
+  // deleteButtons()
+  // displayOceanFunFact()
+  // createTrueAndFalseButtons()
+  render()
   // checkForTrueAndFalse()
   // console.log(score)
   // console.log(timeLeft)
   // console.log(funFactElement)
 }
 
+function render() {
+  printTimer()
+  deleteImages()
+  deleteButtons()
+  displayOceanFunFact()
+  createTrueAndFalseButtons()
+
+}
 
 
 function printScore() {
@@ -169,10 +177,13 @@ function checkForFalseClick() {
 
   // if(trueOrFalse == funFact.isCorrect)
   // score++
-  console.log(trueOrFalse)
-  console.log(score)
+  // console.log(trueOrFalse)
+  // console.log(score)
   // if(trueOrFalse)
     printScore()
+    displayOceanFunFact()
+    createTrueAndFalseButtons()
+    enableTrueAndFalse()
 }
 
 function checkForTrueClick(){
@@ -180,13 +191,22 @@ function checkForTrueClick(){
     falseButton.disabled = true
   if(trueOrFalse == funFact.isCorrect) score++
   printScore()
-  console.log(funFact.isCorrect)
-  console.log(score)
-  console.log(trueOrFalse)
+  displayOceanFunFact()
+  createTrueAndFalseButtons()
 
+
+  // console.log(funFact.isCorrect)
+  // console.log(score)
+  // console.log(trueOrFalse)
+enableTrueAndFalse()
 }
+
 // checkForTrueClick()
 // checkForClick()
+function enableTrueAndFalse() {
+  trueButton.disabled = false
+  falseButton.disabled = false
+}
 
 
 
