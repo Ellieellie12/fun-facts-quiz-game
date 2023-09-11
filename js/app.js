@@ -7,17 +7,22 @@ import { funFactsBirds } from "./fun-facts.js"
 // console.log(funFactsOceans)
 // console.log(funFactsFish)
 const minute = '00'
-
+// console.log(trueOrFalse)
 
 
 /*---------------------------- Variables (state) ----------------------------*/
 let score = 0
 let timeLeft = 0
-let funFact 
-let trueButton 
-let falseButton
+let funFact
+let trueButton = document.createElement('button')
+let falseButton = document.createElement('button')
 let trueAndFalse
 
+let trueOrFalse 
+
+
+
+// let buttonClicked
 
 
 
@@ -38,11 +43,11 @@ const resetButton = document.querySelector('.resetbutton')
 // console.log(resetButton)
 
 const oceanImage = document.querySelector('.oceansimg')
-console.log(oceanImage)
+// console.log(oceanImage)
 const birdsImage = document.querySelector('.birdsimg')
-console.log(birdsImage)
+// console.log(birdsImage)
 const fishImage = document.querySelector('.fishimg')
-console.log(fishImage)
+// console.log(fishImage)
 
 const funFactElement = document.querySelector('#categoryimages')
 // console.log(funFactElement)
@@ -52,6 +57,15 @@ const funFactElement = document.querySelector('#categoryimages')
 oceanButton.addEventListener('click', play)
 
 
+
+
+trueButton.addEventListener('click', checkForTrueClick)
+
+// console.log(trueButton)
+
+falseButton.addEventListener('click', checkForFalseClick)
+
+// console.log(falseButton)
 
 
 
@@ -68,9 +82,11 @@ function play() {
   deleteButtons()
   displayOceanFunFact()
   createTrueAndFalseButtons()
+
+  // checkForTrueAndFalse()
   // console.log(score)
   // console.log(timeLeft)
-  console.log(funFactElement)
+  // console.log(funFactElement)
 }
 
 
@@ -81,7 +97,7 @@ function printScore() {
 
 
 }
-printScore()
+// printScore()
 // console.log(scoreElement)
 
 function printTimer() {
@@ -109,8 +125,8 @@ function displayOceanFunFact() {
   // selecting random fun fact from funFactOceans array
   funFact = funFactsOceans[Math.floor(Math.random() * funFactsOceans.length)]
   // (oceanButton.click()){
-    // display only one funFact text 
-    funFactElement.textContent = funFact.fact
+  // display only one funFact text 
+  funFactElement.textContent = funFact.fact
 }
 
 // displayOceanFunFact()
@@ -118,32 +134,215 @@ function displayOceanFunFact() {
 
 function createTrueAndFalseButtons() {
   //create true and false buttons for user to access
-trueButton = document.createElement('button')
-falseButton = document.createElement('button')
-trueAndFalse = document.createElement('div')
-trueAndFalse.setAttribute('id','trueandfalse')
+  // trueButton = document.createElement('button')
+  // falseButton = document.createElement('button')
+  trueAndFalse = document.createElement('div')
+  trueAndFalse.setAttribute('id', 'trueandfalse')
 
 
-// give buttons a value text appears on the button
-trueButton.textContent = 'true'
-falseButton.textContent = 'false'
-// giving each button an id
-trueButton.setAttribute('id','truebtn')
-falseButton.setAttribute('id','falsebtn')
-// display the buttons to the user in the images section
-trueAndFalse.appendChild(trueButton)
-trueAndFalse.appendChild(falseButton)
-funFactElement.appendChild(trueAndFalse)
-funFactElement.style.flexDirection = 'column'
-funFactElement.style.justifyContent = 'center'
-funFactElement.style.alignItems = 'center'
+  // give buttons a value text appears on the button
+  trueButton.textContent = 'true'
+  falseButton.textContent = 'false'
+  // giving each button an id
+  trueButton.setAttribute('id', 'truebtn')
+  falseButton.setAttribute('id', 'falsebtn')
+  // display the buttons to the user in the images section
+  trueAndFalse.appendChild(trueButton)
+  trueAndFalse.appendChild(falseButton)
+  funFactElement.appendChild(trueAndFalse)
+  funFactElement.style.flexDirection = 'column'
+  funFactElement.style.justifyContent = 'center'
+  funFactElement.style.alignItems = 'center'
 
 }
-console.log(trueAndFalse)
-// createTrueAndFalseButtons()
-console.log(trueButton)
-console.log(falseButton)
 
+function checkForFalseClick() {
+  // if(trueButton) {
+  //   trueOrFalse = 'true' 
+  //   falseButton.disabled = true
+  //   // console.log(trueOrFalse)
+  // }
+     trueOrFalse = false
+     trueButton.disabled = true
+    //  console.log(trueOrFalse)
+  if(trueOrFalse == funFact.isCorrect) score++
+
+  // if(trueOrFalse == funFact.isCorrect)
+  // score++
+  console.log(trueOrFalse)
+  console.log(score)
+  // if(trueOrFalse)
+    printScore()
+}
+
+function checkForTrueClick(){
+    trueOrFalse = true 
+    falseButton.disabled = true
+  if(trueOrFalse == funFact.isCorrect) score++
+  printScore()
+  console.log(funFact.isCorrect)
+  console.log(score)
+  console.log(trueOrFalse)
+
+}
+// checkForTrueClick()
+// checkForClick()
+
+
+
+// function checkForClick() {
+//   if(trueButton) {
+//     trueOrFalse == funFact.isCorrect
+//     score++
+//   } else if(falseButton){
+//     trueOrFalse == funFact.isCorrect
+//     score++
+//   } else {
+//      score = score
+//      printScore()
+//   }
+// }
+
+// checkForClick()
+
+// checkForClick()
+// function checkForClick() {
+//   if(trueButton = 'true' || fals {
+//     trueOrFalse == funFact.isCorrect
+//     score++
+//   } else 
+//      score = score
+//      printScore()
+//   }
+// }
+
+// function checkForClick() {
+//   if(trueButton || falseButton) {
+//     trueOrFalse == funFact.isCorrect
+//     score++
+//   } else {
+//      score = score
+//      printScore()
+//   }
+// }
+
+
+// checkForClick()
+
+// function checkForClick() {
+//   if(trueButton) {
+//     trueOrFalse == funFact.isCorrect
+//     score++
+//   } else if(falseButton){
+//     trueOrFalse == funFact.isCorrect
+//     score++
+//   } else {
+//      score = score
+//      printScore()
+//   }
+// }
+
+
+
+// function checkForClick() {
+//   if(trueButton || falseButton) {
+//     trueOrFalse == funFact.isCorrect
+//     score++
+//   } else {
+//      score = score
+//      printScore()
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+// createTrueAndFalseButtons()
+// console.log(trueAndFalse)
+// createTrueAndFalseButtons()
+// console.log(trueButton)
+// console.log(falseButton)
+
+// function checkForTrueAndFalse() {
+//   if(trueButton.click()) {
+//     buttonClicked = 'true'
+//   }
+//   if(trueButton.click()) {
+//     buttonClicked = 'false'
+
+//   }
+//   console.log(buttonClicked)
+// }
+// deleteImages()
+// deleteButtons()
+// displayOceanFunFact()
+// createTrueAndFalseButtons()
+
+// function checkForTrue() {
+//   buttonClicked = 'true'
+//   if (buttonClicked == funFact.isCorrect) {
+//     score++
+//     // console.log(buttonClicked) 
+//   }
+// }
+// if(trueButton.clicked()){
+
+// }
+
+
+// function checkForFalse() {
+//   buttonClicked = 'false'
+//   if (buttonClicked != funFact.isCorrect)
+//     score = score
+//   console.log(funFact.isCorrect)
+  // console.log(buttonClicked)
+// }
+
+// displayOceanFunFact()
+
+// function checkForScore() {
+  // score = 0
+  // if (buttonClicked == funFact.isCorrect) {
+  //   score++
+  // } else if (buttonClicked != funFact.isCorrect)
+  //   score = score
+
+// }
+
+// checkForTrue()
+//   checkForFalse()
+//   checkForScore() 
+
+// displayOceanFunFact()
+// createTrueAndFalseButtons()
+// checkForFalse()
+// checkForTrue()
+// checkForScore()
+// // console.log(buttonClicked)
+
+
+
+
+
+
+
+// checkForTrueAndFalse()
+//     if (buttonClicked === funFact.isCorrect) {
+//       return true
+
+//     }
+// }
+// (oceanButton.click()){
+// console.log(trueButton)
+// console.log(falseButton)
+
+// checkForTrueAndFalse()
 
 
 
