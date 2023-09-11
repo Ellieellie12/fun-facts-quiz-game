@@ -12,6 +12,7 @@ const minute = '00'
 
 /*---------------------------- Variables (state) ----------------------------*/
 let score = 0
+let timer 
 let timeLeft = 0
 let funFact
 let trueButton = document.createElement('button')
@@ -76,7 +77,7 @@ falseButton.addEventListener('click', checkForFalseClick)
 function play() {
   // initializes score and them time left when the game begins 
   score = 0
-  timeLeft = 40
+  timeLeft = 20
   // printTimer()
   // deleteImages()
   // deleteButtons()
@@ -110,10 +111,32 @@ function printScore() {
 
 function printTimer() {
   timerElement.textContent = `${minute} : ${timeLeft}`
+  timeLeft = 20
+  timer = setInterval(function() {
+    timerElement.textContent = timeLeft + ' seconds remaining '
+    timeLeft -= 1
+    timerElement.textContent = `${minute} : ${timeLeft}`
+  if (timeLeft < 1) {
+    clearInterval(timer) 
+  }
+  }, 1000)
+
+  
+
 }
 
-printTimer()
+// printTimer()
 
+
+// // let timer = setInterval(function () {
+// //    countDownEl.textContent = timeLeft + ' seconds remaining '
+// //    timeLeft -= 1
+// //    if (timeLeft < 0) {
+// //       countDownEl.textContent = 'Game Over!!!'
+// //       clearInterval(timer)
+// //    }
+
+// // }, 1000)
 
 function deleteImages() {
   // when category button is clicked all images delete 
