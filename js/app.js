@@ -15,6 +15,7 @@ let trueButton = document.createElement('button')
 let falseButton = document.createElement('button')
 let trueAndFalse
 let trueOrFalse
+let currentCategory
 
 // let winner
 // let timeLeft
@@ -34,6 +35,7 @@ const fishButton = document.querySelector('.fishbutton')
 const scoreElement = document.querySelector('.score')
 const timerElement = document.querySelector('.timer')
 const resetButton = document.querySelector('.resetbutton')
+const categoryButtons = document.querySelector('#categorybuttons')
 const oceanImage = document.querySelector('.oceansimg')
 const birdsImage = document.querySelector('.birdsimg')
 const fishImage = document.querySelector('.fishimg')
@@ -41,9 +43,11 @@ const funFactElement = document.querySelector('#categoryimages')
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-oceanButton.addEventListener('click', playOcean)
-birdsButton.addEventListener('click', playBird)
+// oceanButton.addEventListener('click', playOcean)
+// birdsButton.addEventListener('click', playBird)
 // fishButton.addEventListener('click', playFish)
+
+categoryButtons.addEventListener('click', selectCategory)
 
 
 
@@ -57,24 +61,90 @@ resetButton.addEventListener('click', reset)
 
 
 /*-------------------------------- Functions --------------------------------*/
-function playOcean() {
-  // initializes score and them time left when the game begins 
-  score = 0
-  timeLeft = 20
+function selectCategory(evt) {
+if(evt.target.id === 'oceanbtn') {
+  currentCategory = [...funFactsOceans]
+}
+if(evt.target.id === 'birdbtn'){
+  currentCategory = [...funFactsBirds]
+
+}
+if(evt.target.id === 'fishbtn'){
+  currentCategory = [...funFactsFish]
+
+}
+hideButtonsAndImages()
+printTimer()
+printScore()
+displayFunFact()
+}
+
+
+function hideButtonsAndImages() {
+  oceanImage.style.visibility ='hidden'
+  birdsImage.style.visibility = 'hidden'
+  fishImage.style.visibility = 'hidden'
+  oceanButton.style.visibility = 'hidden'
+  birdsButton.style.visibility = 'hidden'
+  fishButton.style.visibility = 'hidden'
+}
+
+function displayFunFact() {
+  funFact = currentCategory[Math.floor(Math.random() * currentCategory.length)]
+  funFactElement.textContent = funFact.fact
+}
+
+
+function createTrueAndFalseButtons() {
+  // create true and false buttons for user to access
+  trueAndFalse = document.createElement('div')
+  trueAndFalse.setAttribute('id', 'trueandfalse')
+
+
+  // give buttons a value text appears on the button
+  trueButton.textContent = 'true'
+  falseButton.textContent = 'false'
+  // giving each button an id
+  trueButton.setAttribute('id', 'truebtn')
+  falseButton.setAttribute('id', 'falsebtn')
+  // display the buttons to the user in the images section
+  trueAndFalse.appendChild(trueButton)
+  trueAndFalse.appendChild(falseButton)
+  funFactElement.appendChild(trueAndFalse)
+  funFactElement.style.flexDirection = 'column'
+  funFactElement.style.justifyContent = 'center'
+  funFactElement.style.alignItems = 'center'
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// function playOcean() {
+//   // initializes score and them time left when the game begins 
+//   score = 0
+//   timeLeft = 20
   // printTimer()
   // deleteImages()
   // deleteButtons()
   // displayOceanFunFact()
   // createTrueAndFalseButtons()
-  renderOcean()
-}
+  // renderOcean()
+// }
 
-function playBird() {
-  score = 0
-  timeLeft = 20
-  renderBird()
+// function playBird() {
+//   score = 0
+//   timeLeft = 20
+//   // renderBird()
 
-}
+// }
 
 
 
@@ -84,21 +154,23 @@ function playBird() {
 // }
 
 
+// function renderOcean() {
+//   printTimer()
+//   hideImages()
+//   deleteButtons()
+//   displayOceanFunFact()
+//   createTrueAndFalseButtons()
+//   checkForWinner()
+// }
 
-function renderOcean() {
-  printTimer()
-  hideImages()
-  deleteButtons()
-  displayOceanFunFact()
-  createTrueAndFalseButtons()
-  checkForWinner()
-}
-
-function renderBird() {
-  printTimer()
-  hideImages()
-  deleteButtons()
-}
+// function renderBird() {
+//   printTimer()
+//   hideImages()
+//   deleteButtons()
+//   displayBirdsFunFact()
+//   createTrueAndFalseButtons()
+//   checkForWinner()
+// }
 
 function printScore() {
   // prints score only when user initializes the game 
@@ -138,19 +210,19 @@ function showImages() {
   fishImage.style.visibility= 'visible'
 }
 
-function hideImages() {
-  // when category button is clicked all image
-  oceanImage.style.visibility ='hidden'
-  birdsImage.style.visibility = 'hidden'
-  fishImage.style.visibility = 'hidden'
+// function hideImages() {
+//   // when category button is clicked all image
+//   oceanImage.style.visibility ='hidden'
+//   birdsImage.style.visibility = 'hidden'
+//   fishImage.style.visibility = 'hidden'
 
-}
+// }
 
-function deleteButtons() {
-  oceanButton.style.visibility = 'hidden'
-  birdsButton.style.visibility = 'hidden'
-  fishButton.style.visibility = 'hidden'
-}
+// function deleteButtons() {
+//   oceanButton.style.visibility = 'hidden'
+//   birdsButton.style.visibility = 'hidden'
+//   fishButton.style.visibility = 'hidden'
+// }
 
 function displayButtons() {
   oceanButton.style.visibility = 'visible'
@@ -158,12 +230,10 @@ function displayButtons() {
   fishButton.style.visibility = 'visible'
 }
 
-function displayOceanFunFact() {
-  // selecting random fun fact from funFactOceans array
-  funFact = funFactsOceans[Math.floor(Math.random() * funFactsOceans.length)]
-  // (oceanButton.click()){
-  // display only one funFact text 
-  // messageResult.style.visibility = 'visible'
+
+
+function displayBirdsFunFact() {
+  funFact = funFactsBirds[Math.floor(Math.random() * funFactsBirds.length)]
   funFactElement.textContent = funFact.fact
 }
 
@@ -172,27 +242,6 @@ function changeFunFactElement() {
 }
 
 
-function createTrueAndFalseButtons() {
-  // create true and false buttons for user to access
-  trueAndFalse = document.createElement('div')
-  trueAndFalse.setAttribute('id', 'trueandfalse')
-
-
-  // give buttons a value text appears on the button
-  trueButton.textContent = 'true'
-  falseButton.textContent = 'false'
-  // giving each button an id
-  trueButton.setAttribute('id', 'truebtn')
-  falseButton.setAttribute('id', 'falsebtn')
-  // display the buttons to the user in the images section
-  trueAndFalse.appendChild(trueButton)
-  trueAndFalse.appendChild(falseButton)
-  funFactElement.appendChild(trueAndFalse)
-  funFactElement.style.flexDirection = 'column'
-  funFactElement.style.justifyContent = 'center'
-  funFactElement.style.alignItems = 'center'
-
-}
 
 function checkForFalseClick() {
   // if(trueButton) {
@@ -202,19 +251,14 @@ function checkForFalseClick() {
   // }
   trueOrFalse = false
   trueButton.disabled = true
-  //  console.log(trueOrFalse)
   if (trueOrFalse == funFact.isCorrect) score++
-
-  // if(trueOrFalse == funFact.isCorrect)
-  // score++
-  // console.log(trueOrFalse)
-  // console.log(score)
-  // if(trueOrFalse)
   printScore()
   displayOceanFunFact()
   createTrueAndFalseButtons()
   enableTrueAndFalse()
 }
+
+
 
 function checkForTrueClick() {
   trueOrFalse = true
@@ -222,6 +266,28 @@ function checkForTrueClick() {
   if (trueOrFalse == funFact.isCorrect) score++
   printScore()
   displayOceanFunFact()
+  createTrueAndFalseButtons()
+
+  enableTrueAndFalse()
+}
+
+function checkForFalseClickBird() {
+  trueOrFalse = false
+  trueButton.disabled = true
+  if (trueOrFalse == funFact.isCorrect) score++
+  printScore()
+  displayBirdsFunFact()
+  createTrueAndFalseButtons()
+  enableTrueAndFalse()
+
+}
+
+function checkForTrueClickBird() {
+  trueOrFalse = true
+  falseButton.disabled = true
+  if (trueOrFalse == funFact.isCorrect) score++
+  printScore()
+  displayBirdsFunFact()
   createTrueAndFalseButtons()
 
   enableTrueAndFalse()
