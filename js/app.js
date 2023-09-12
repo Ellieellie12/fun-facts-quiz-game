@@ -2,12 +2,8 @@ import { funFactsFish } from "./fun-facts.js"
 import { funFactsOceans } from "./fun-facts.js"
 import { funFactsBirds } from "./fun-facts.js"
 /*-------------------------------- Constants --------------------------------*/
-
-// console.log(funFactsBirds)
-// console.log(funFactsOceans)
-// console.log(funFactsFish)
 const minute = '00'
-// console.log(trueOrFalse)
+
 
 
 /*---------------------------- Variables (state) ----------------------------*/
@@ -18,9 +14,14 @@ let funFact
 let trueButton = document.createElement('button')
 let falseButton = document.createElement('button')
 let trueAndFalse
-
 let trueOrFalse
-// let winner 
+
+// let winner
+// let timeLeft
+// let timerInterval
+// let score
+// let currentCategory
+// let currentQuestion
 
 
 
@@ -28,50 +29,35 @@ let trueOrFalse
 
 /*------------------------ Cached Element References ------------------------*/
 const oceanButton = document.querySelector('.oceansbutton')
-// console.log(oceanButton)
 const birdsButton = document.querySelector('.birdsbutton')
-// console.log(birdsButton)
 const fishButton = document.querySelector('.fishbutton')
-// console.log(fishButton)
 const scoreElement = document.querySelector('.score')
-// console.log(score)
 const timerElement = document.querySelector('.timer')
-// console.log(timer)
 const resetButton = document.querySelector('.resetbutton')
-// console.log(resetButton)
-
 const oceanImage = document.querySelector('.oceansimg')
-// console.log(oceanImage)
 const birdsImage = document.querySelector('.birdsimg')
-// console.log(birdsImage)
 const fishImage = document.querySelector('.fishimg')
-// console.log(fishImage)
-
 const funFactElement = document.querySelector('#categoryimages')
-// console.log(funFactElement)
 
-const messageElement = document.querySelector('.message')
+
 /*----------------------------- Event Listeners -----------------------------*/
-oceanButton.addEventListener('click', play)
+oceanButton.addEventListener('click', playOcean)
+birdsButton.addEventListener('click', playBird)
+// fishButton.addEventListener('click', playFish)
+
 
 
 
 
 trueButton.addEventListener('click', checkForTrueClick)
-
-// console.log(trueButton)
-
 falseButton.addEventListener('click', checkForFalseClick)
-
-// console.log(falseButton)
-
+resetButton.addEventListener('click', reset)
 
 
 
 
 /*-------------------------------- Functions --------------------------------*/
-
-function play() {
+function playOcean() {
   // initializes score and them time left when the game begins 
   score = 0
   timeLeft = 20
@@ -80,32 +66,45 @@ function play() {
   // deleteButtons()
   // displayOceanFunFact()
   // createTrueAndFalseButtons()
-  render()
-  
-  // checkForTrueAndFalse()
-  // console.log(score)
-  // console.log(timeLeft)
-  // console.log(funFactElement)
+  renderOcean()
 }
 
-function render() {
+function playBird() {
+  score = 0
+  timeLeft = 20
+  renderBird()
+
+}
+
+
+
+// function playFish() {
+//   score = 0
+//   timeLeft = 20
+// }
+
+
+
+function renderOcean() {
   printTimer()
-  deleteImages()
+  hideImages()
   deleteButtons()
   displayOceanFunFact()
   createTrueAndFalseButtons()
   checkForWinner()
-
 }
 
+function renderBird() {
+  printTimer()
+  hideImages()
+  deleteButtons()
+}
 
 function printScore() {
   // prints score only when user initializes the game 
   scoreElement.textContent = `${score}`
 
 }
-// printScore()
-// console.log(scoreElement)
 
 function printTimer() {
   timerElement.textContent = `${minute} : ${timeLeft}`
@@ -114,6 +113,7 @@ function printTimer() {
     timerElement.textContent = timeLeft + ' seconds remaining '
     timeLeft -= 1
     timerElement.textContent = `${minute} : ${timeLeft}`
+    checkForWinner()
     if (timeLeft < 1) {
       clearInterval(timer)
     }
@@ -121,32 +121,28 @@ function printTimer() {
 }
 
 
-// printTimer()
-
 
 function checkForWinner() {
   if(score >= 10) {
-    messageElement.textContent = 'Winner!!!'
+    clearInterval(timer)
+    funFactElement.textContent = 'Winner!!!'
   } else if(timeLeft === 0) {
-    messageElement.textContent = 'You Lose! Try Again!'
+    funFactElement.textContent = 'You Lose! Try Again!'
   }
 }
 
-// // let timer = setInterval(function () {
-// //    countDownEl.textContent = timeLeft + ' seconds remaining '
-// //    timeLeft -= 1
-// //    if (timeLeft < 0) {
-// //       countDownEl.textContent = 'Game Over!!!'
-// //       clearInterval(timer)
-// //    }
 
-// // }, 1000)
+function showImages() {
+  oceanImage.style.visibility = 'visible'
+  birdsImage.style.visibility = 'visible'
+  fishImage.style.visibility= 'visible'
+}
 
-function deleteImages() {
-  // when category button is clicked all images delete 
-  oceanImage.remove()
-  birdsImage.remove()
-  fishImage.remove()
+function hideImages() {
+  // when category button is clicked all image
+  oceanImage.style.visibility ='hidden'
+  birdsImage.style.visibility = 'hidden'
+  fishImage.style.visibility = 'hidden'
 
 }
 
@@ -156,21 +152,28 @@ function deleteButtons() {
   fishButton.style.visibility = 'hidden'
 }
 
+function displayButtons() {
+  oceanButton.style.visibility = 'visible'
+  birdsButton.style.visibility = 'visible'
+  fishButton.style.visibility = 'visible'
+}
+
 function displayOceanFunFact() {
   // selecting random fun fact from funFactOceans array
   funFact = funFactsOceans[Math.floor(Math.random() * funFactsOceans.length)]
   // (oceanButton.click()){
   // display only one funFact text 
+  // messageResult.style.visibility = 'visible'
   funFactElement.textContent = funFact.fact
 }
 
-// displayOceanFunFact()
-// console.log(funFact.fact)
+function changeFunFactElement() {
+  funFactElement.style.justifyContent = 'column'
+}
+
 
 function createTrueAndFalseButtons() {
-  //create true and false buttons for user to access
-  // trueButton = document.createElement('button')
-  // falseButton = document.createElement('button')
+  // create true and false buttons for user to access
   trueAndFalse = document.createElement('div')
   trueAndFalse.setAttribute('id', 'trueandfalse')
 
@@ -221,22 +224,60 @@ function checkForTrueClick() {
   displayOceanFunFact()
   createTrueAndFalseButtons()
 
-
-  // console.log(funFact.isCorrect)
-  // console.log(score)
-  // console.log(trueOrFalse)
   enableTrueAndFalse()
 }
 
-// checkForTrueClick()
-// checkForClick()
 function enableTrueAndFalse() {
   trueButton.disabled = false
   falseButton.disabled = false
 }
 
+function reset() {
+  clearInterval(timer)
+  scoreElement.textContent = 0
+ funFactElement.textContent = ''
+ showImages()
+ displayButtons()
+
+}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  funFactElement.textContent = ''
+//  oceanImage.setAttribute('class','oceansimg')
+//  birdsImage.setAttribute('class','birdsimg')
+//  fishImage.setAttribute('class','fishimg')
+//   funFactElement.appendChild(oceanImage)
+//   funFactElement.appendChild(birdsImage)
+//   funFactElement.appendChild(fishImage)
+//   funFactElement.style.flexDirection = 'column'
+//   funFactElement.style.justifyContent = 'center'
+//   funFactElement.style.alignItems = 'center'
+//   console.log(funFactElement)
+// }
 
 
 // function checkForWinner(){
