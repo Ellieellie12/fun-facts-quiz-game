@@ -21,7 +21,6 @@ const funFactsOceans = [
   { isCorrect: false, fact: "The Ocean doesn't regulate the climate of the world." }
 ]
 
-
 const funFactsBirds = [
   { isCorrect: true, fact: "There are more than 18,000 bird species in the world." },
   { isCorrect: true, fact: "Birds are the only animal with feathers." },
