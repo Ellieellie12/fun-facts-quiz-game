@@ -11,7 +11,6 @@ let timeLeft = 40
 let timer, funFact, trueAndFalse, trueOrFalse, currentCategory
 let trueButton = document.createElement('button')
 let falseButton = document.createElement('button')
-// let newImages, newBirdsImage, newOceanImage, newFishImage
 
 /*------------------------ Cached Element References ------------------------*/
 const oceanButton = document.querySelector('.oceansbutton')

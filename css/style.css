@@ -6,6 +6,11 @@ div {
   border: solid 2px black;
 }
 
+body {
+  background-color: #3eb2a8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23473b5a' fill-opacity='0.62' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
 .header {
   font-size: 60px;
   margin-top: 30px;
@@ -16,24 +21,24 @@ div {
   justify-content: space-evenly;
   margin-top: 30px;
   border: solid 2px black;
-  font-size: 25px;
+  font-size: 30px;
   height: 75px;
-
 }
+
 
 .resetbutton {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 0px 20px;
-  font-size: 25px
+  font-size: 25px;
+  border-radius: 40px;
 }
 
 #categoryimages {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  /* align-items: baseline; */
   margin-top: 150px;
   margin-bottom: 40px;
   border: solid 2px black;
@@ -60,20 +65,32 @@ div {
   justify-content: space-evenly;
   margin-top: 20px;
   height: 75px;
-
 }
 
 .oceansbutton {
+  color: blue;
   font-size: 25px;
-  /* margin-right: 80px; */
+  background-color: snow;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 100px
 }
 
 .birdsbutton {
+  color: red;
   font-size: 25px;
+  background-color: snow;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 100px
 }
 
 .fishbutton {
+  color: green;
   font-size: 25px;
+  background-color: snow;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 #trueandfalse {
@@ -176,10 +193,7 @@ h3 {
   justify-content: center;
 }
 
-body {
-  background-color: #3eb2a8;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23473b5a' fill-opacity='0.62' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-}
+
 
 .container {
   display: flex;
