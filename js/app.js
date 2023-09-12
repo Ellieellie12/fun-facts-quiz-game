@@ -41,11 +41,11 @@ if(evt.target.id === 'oceanbtn') {
 }
 if(evt.target.id === 'birdbtn'){
   currentCategory = [...funFactsBirds]
-
+  buttonAudio.playBirdsSound()
 }
 if(evt.target.id === 'fishbtn'){
   currentCategory = [...funFactsFish]
-
+  buttonAudio.playFishSound()
 }
 render()
 }
