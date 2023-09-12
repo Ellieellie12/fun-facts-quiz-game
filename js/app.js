@@ -1,7 +1,7 @@
 import { funFactsFish } from "./fun-facts.js"
 import { funFactsOceans } from "./fun-facts.js"
 import { funFactsBirds } from "./fun-facts.js"
-// import * as buttonA from './audio.js'
+import * as buttonAudio from './audio.js'
 /*-------------------------------- Constants --------------------------------*/
 const minute = '00'
 
@@ -11,7 +11,7 @@ let timeLeft = 40
 let timer, funFact, trueAndFalse, trueOrFalse, currentCategory
 let trueButton = document.createElement('button')
 let falseButton = document.createElement('button')
-let newImages, newBirdsImage, newOceanImage, newFishImage
+// let newImages, newBirdsImage, newOceanImage, newFishImage
 
 /*------------------------ Cached Element References ------------------------*/
 const oceanButton = document.querySelector('.oceansbutton')
@@ -37,7 +37,7 @@ falseButton.addEventListener('click', checkForTrueAndFalse)
 function selectCategory(evt) {
 if(evt.target.id === 'oceanbtn') {
   currentCategory = [...funFactsOceans]
-  
+  buttonAudio.playOceanSound()
 }
 if(evt.target.id === 'birdbtn'){
   currentCategory = [...funFactsBirds]
