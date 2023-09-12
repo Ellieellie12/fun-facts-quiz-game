@@ -1,6 +1,7 @@
 import { funFactsFish } from "./fun-facts.js"
 import { funFactsOceans } from "./fun-facts.js"
 import { funFactsBirds } from "./fun-facts.js"
+// import * as buttonA from './audio.js'
 /*-------------------------------- Constants --------------------------------*/
 const minute = '00'
 
@@ -36,6 +37,7 @@ falseButton.addEventListener('click', checkForTrueAndFalse)
 function selectCategory(evt) {
 if(evt.target.id === 'oceanbtn') {
   currentCategory = [...funFactsOceans]
+  
 }
 if(evt.target.id === 'birdbtn'){
   currentCategory = [...funFactsBirds]
@@ -167,4 +169,5 @@ function reset() {
   funFactElement.textContent = ''
   displayButtons()
   createImages()
+  showImages()
 }
