@@ -12,6 +12,7 @@ body {
 }
 
 .header {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 60px;
   margin-top: 30px;
   border: solid 2px black;
@@ -19,6 +20,7 @@ body {
 
 #scoretimerandresetbutton {
   justify-content: space-evenly;
+  font-family: 'Times New Roman', Times, serif;
   margin-top: 30px;
   border: solid 2px black;
   font-size: 30px;
@@ -32,7 +34,9 @@ body {
   justify-content: center;
   margin-top: 0px 20px;
   font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
   border-radius: 40px;
+  cursor: pointer;
 }
 
 #categoryimages {
@@ -70,27 +74,46 @@ body {
 .oceansbutton {
   color: blue;
   font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: snow;
   border-radius: 4px;
   cursor: pointer;
-  margin-right: 100px
+  margin-right: 100px;
+  width: 100px;
 }
 
 .birdsbutton {
   color: red;
   font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: snow;
   border-radius: 4px;
   cursor: pointer;
-  margin-right: 100px
+  margin-right: 100px;
+  width: 100px;
 }
 
 .fishbutton {
   color: green;
   font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: snow;
   border-radius: 4px;
   cursor: pointer;
+  width: 100px;
+}
+
+
+#truebtn {
+font-size: 25px;
+width: 100px;
+}
+
+#falsebtn {
+  font-size: 25px;
+  width: 100px;
+justify-content: space-between;
+
 }
 
 #trueandfalse {
@@ -100,6 +123,9 @@ body {
   width: 200px;
   
 }
+
+
+
 
 
 

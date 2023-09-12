@@ -74,8 +74,8 @@ function displayFunFact() {
 function createTrueAndFalseButtons() {
   trueAndFalse = document.createElement('div')
   trueAndFalse.setAttribute('id', 'trueandfalse')
-  trueButton.textContent = 'true'
-  falseButton.textContent = 'false'
+  trueButton.textContent = 'True'
+  falseButton.textContent = 'False'
   trueButton.setAttribute('id', 'truebtn')
   falseButton.setAttribute('id', 'falsebtn')
   trueAndFalse.appendChild(trueButton)
