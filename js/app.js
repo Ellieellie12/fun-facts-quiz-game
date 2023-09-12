@@ -9,13 +9,14 @@ const minute = '00'
 /*---------------------------- Variables (state) ----------------------------*/
 let score = 0
 let timer
-let timeLeft = 0
+let timeLeft = 40
 let funFact
 let trueButton = document.createElement('button')
 let falseButton = document.createElement('button')
 let trueAndFalse
 let trueOrFalse
 let currentCategory
+let newImages, newBirdsImage, newOceanImage, newFishImage
 
 // let winner
 // let timeLeft
@@ -100,8 +101,6 @@ function createTrueAndFalseButtons() {
   // create true and false buttons for user to access
   trueAndFalse = document.createElement('div')
   trueAndFalse.setAttribute('id', 'trueandfalse')
-
-
   // give buttons a value text appears on the button
   trueButton.textContent = 'true'
   falseButton.textContent = 'false'
@@ -127,8 +126,11 @@ function checkForTrueAndFalse(evt) {
     trueOrFalse = false
     trueButton.disabled = true
   }
- 
+  if(trueOrFalse === funFact.isCorrect) score++
+    printScore()
     enableTrueAndFalse()
+    displayFunFact()
+    nextQuestion()
 console.log(trueOrFalse)
 }
 
@@ -136,6 +138,109 @@ function enableTrueAndFalse() {
   trueButton.disabled = false
   falseButton.disabled = false
 }
+
+
+
+function nextQuestion() {
+  displayFunFact()
+  createTrueAndFalseButtons()
+}
+
+function printScore() {
+  // prints score only when user initializes the game 
+  scoreElement.textContent = `${score}`
+
+}
+
+function printTimer() {
+  timerElement.textContent = `${minute} : ${timeLeft}`
+  timeLeft = 40
+  timer = setInterval(function () {
+    timerElement.textContent = timeLeft + ' seconds remaining '
+    timeLeft -= 1
+    timerElement.textContent = `${minute} : ${timeLeft}`
+    checkForWinner()
+    if (timeLeft < 1) {
+      clearInterval(timer)
+    }
+  }, 1000)
+}
+
+
+function checkForWinner() {
+  if(score >= 10) {
+    clearInterval(timer)
+    funFactElement.textContent = 'Winner!!!'
+  } else if(timeLeft === 0) {
+    funFactElement.textContent = 'You Lose! Try Again!'
+  }
+}
+
+
+
+function showImages() {
+  oceanImage.style.visibility = 'visible'
+  birdsImage.style.visibility = 'visible'
+  fishImage.style.visibility= 'visible'
+}
+
+function displayButtons() {
+  oceanButton.style.visibility = 'visible'
+  birdsButton.style.visibility = 'visible'
+  fishButton.style.visibility = 'visible'
+}
+
+function createImages() {
+
+  oceanImage.setAttribute('class','oceansimg')
+  birdsImage.setAttribute('class','birdsimg')
+  fishImage.setAttribute('class','fishimg')
+    funFactElement.appendChild(oceanImage)
+    funFactElement.appendChild(birdsImage)
+    funFactElement.appendChild(fishImage)
+    funFactElement.style.flexDirection = 'row'
+    funFactElement.style.justifyContent = 'space-evenly'
+    // funFactElement.style.alignItems = 'center'
+
+
+
+  // funFactElement.remove()
+  // newImages = document.createElement('section').setAttribute('id', 'categoryimages')
+  // newOceanImage = document.createElement('div').setAttribute('class', 'oceansimg')
+  // newBirdsImage = document.createElement('div').setAttribute('class', 'birdsimg')
+  // newFishImage = document.createElement('div').setAttribute('class', 'fishimg')
+  // newImages.appendChild(newOceanImage)
+  // newImages.appendChild(newBirdsImage)
+  // newImages.appendChild(newFishImage)
+}
+
+function reset() {
+  clearInterval(timer)
+  scoreElement.textContent = 0
+  timerElement.textContent = `${minute} : ${minute}`
+funFactElement.textContent = ''
+displayButtons()
+createImages()
+ 
+
+}
+
+
+
+//  funFactElement.textContent = ''
+//  oceanImage.setAttribute('class','oceansimg')
+//  birdsImage.setAttribute('class','birdsimg')
+//  fishImage.setAttribute('class','fishimg')
+//   funFactElement.appendChild(oceanImage)
+//   funFactElement.appendChild(birdsImage)
+//   funFactElement.appendChild(fishImage)
+//   funFactElement.style.flexDirection = 'column'
+//   funFactElement.style.justifyContent = 'center'
+//   funFactElement.style.alignItems = 'center'
+
+
+
+
 
 
 
@@ -189,43 +294,11 @@ function enableTrueAndFalse() {
 //   checkForWinner()
 // }
 
-function printScore() {
-  // prints score only when user initializes the game 
-  scoreElement.textContent = `${score}`
-
-}
-
-function printTimer() {
-  timerElement.textContent = `${minute} : ${timeLeft}`
-  timeLeft = 20
-  timer = setInterval(function () {
-    timerElement.textContent = timeLeft + ' seconds remaining '
-    timeLeft -= 1
-    timerElement.textContent = `${minute} : ${timeLeft}`
-    checkForWinner()
-    if (timeLeft < 1) {
-      clearInterval(timer)
-    }
-  }, 1000)
-}
 
 
 
-function checkForWinner() {
-  if(score >= 10) {
-    clearInterval(timer)
-    funFactElement.textContent = 'Winner!!!'
-  } else if(timeLeft === 0) {
-    funFactElement.textContent = 'You Lose! Try Again!'
-  }
-}
 
 
-function showImages() {
-  oceanImage.style.visibility = 'visible'
-  birdsImage.style.visibility = 'visible'
-  fishImage.style.visibility= 'visible'
-}
 
 // function hideImages() {
 //   // when category button is clicked all image
@@ -241,11 +314,11 @@ function showImages() {
 //   fishButton.style.visibility = 'hidden'
 // }
 
-function displayButtons() {
-  oceanButton.style.visibility = 'visible'
-  birdsButton.style.visibility = 'visible'
-  fishButton.style.visibility = 'visible'
-}
+// function displayButtons() {
+//   oceanButton.style.visibility = 'visible'
+//   birdsButton.style.visibility = 'visible'
+//   fishButton.style.visibility = 'visible'
+// }
 
 
 
@@ -312,14 +385,7 @@ function changeFunFactElement() {
 
 
 
-function reset() {
-  clearInterval(timer)
-  scoreElement.textContent = 0
- funFactElement.textContent = ''
- showImages()
- displayButtons()
 
-}
 
 
 
