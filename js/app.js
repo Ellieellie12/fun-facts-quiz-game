@@ -53,8 +53,8 @@ categoryButtons.addEventListener('click', selectCategory)
 
 
 
-trueButton.addEventListener('click', checkForTrueClick)
-falseButton.addEventListener('click', checkForFalseClick)
+trueButton.addEventListener('click', checkForTrueAndFalse)
+falseButton.addEventListener('click', checkForTrueAndFalse)
 resetButton.addEventListener('click', reset)
 
 
@@ -77,6 +77,7 @@ hideButtonsAndImages()
 printTimer()
 printScore()
 displayFunFact()
+createTrueAndFalseButtons()
 }
 
 
@@ -114,11 +115,27 @@ function createTrueAndFalseButtons() {
   funFactElement.style.flexDirection = 'column'
   funFactElement.style.justifyContent = 'center'
   funFactElement.style.alignItems = 'center'
-
 }
 
 
+function checkForTrueAndFalse(evt) {
+  if(evt.target.id === 'truebtn'){
+    trueOrFalse = true
+    falseButton.disabled = true
+  }
+  if(evt.target.id === 'falsebtn'){
+    trueOrFalse = false
+    trueButton.disabled = true
+  }
+ 
+    enableTrueAndFalse()
+console.log(trueOrFalse)
+}
 
+function enableTrueAndFalse() {
+  trueButton.disabled = false
+  falseButton.disabled = false
+}
 
 
 
@@ -243,60 +260,57 @@ function changeFunFactElement() {
 
 
 
-function checkForFalseClick() {
-  // if(trueButton) {
-  //   trueOrFalse = 'true' 
-  //   falseButton.disabled = true
-  //   // console.log(trueOrFalse)
-  // }
-  trueOrFalse = false
-  trueButton.disabled = true
-  if (trueOrFalse == funFact.isCorrect) score++
-  printScore()
-  displayOceanFunFact()
-  createTrueAndFalseButtons()
-  enableTrueAndFalse()
-}
+// function checkForFalseClick() {
+//   // if(trueButton) {
+//   //   trueOrFalse = 'true' 
+//   //   falseButton.disabled = true
+//   //   // console.log(trueOrFalse)
+//   // }
+//   trueOrFalse = false
+//   trueButton.disabled = true
+//   if (trueOrFalse == funFact.isCorrect) score++
+//   printScore()
+//   displayOceanFunFact()
+//   createTrueAndFalseButtons()
+//   enableTrueAndFalse()
+// }
 
 
 
-function checkForTrueClick() {
-  trueOrFalse = true
-  falseButton.disabled = true
-  if (trueOrFalse == funFact.isCorrect) score++
-  printScore()
-  displayOceanFunFact()
-  createTrueAndFalseButtons()
+// function checkForTrueClick() {
+//   trueOrFalse = true
+//   falseButton.disabled = true
+//   if (trueOrFalse == funFact.isCorrect) score++
+//   printScore()
+//   // displayOceanFunFact()
+//   createTrueAndFalseButtons()
 
-  enableTrueAndFalse()
-}
+//   enableTrueAndFalse()
+// }
 
-function checkForFalseClickBird() {
-  trueOrFalse = false
-  trueButton.disabled = true
-  if (trueOrFalse == funFact.isCorrect) score++
-  printScore()
-  displayBirdsFunFact()
-  createTrueAndFalseButtons()
-  enableTrueAndFalse()
+// function checkForFalseClickBird() {
+//   trueOrFalse = false
+//   trueButton.disabled = true
+//   if (trueOrFalse == funFact.isCorrect) score++
+//   printScore()
+//   displayBirdsFunFact()
+//   createTrueAndFalseButtons()
+//   enableTrueAndFalse()
 
-}
+// }
 
-function checkForTrueClickBird() {
-  trueOrFalse = true
-  falseButton.disabled = true
-  if (trueOrFalse == funFact.isCorrect) score++
-  printScore()
-  displayBirdsFunFact()
-  createTrueAndFalseButtons()
+// function checkForTrueClickBird() {
+//   trueOrFalse = true
+//   falseButton.disabled = true
+//   if (trueOrFalse == funFact.isCorrect) score++
+//   printScore()
+//   displayBirdsFunFact()
+//   createTrueAndFalseButtons()
 
-  enableTrueAndFalse()
-}
+//   enableTrueAndFalse()
+// }
 
-function enableTrueAndFalse() {
-  trueButton.disabled = false
-  falseButton.disabled = false
-}
+
 
 function reset() {
   clearInterval(timer)
