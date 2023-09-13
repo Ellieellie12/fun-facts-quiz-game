@@ -71,6 +71,7 @@ function displayFunFact() {
   funFactElement.textContent = funFact.fact
 }
 
+
 function createTrueAndFalseButtons() {
   trueAndFalse = document.createElement('div')
   trueAndFalse.setAttribute('id', 'trueandfalse')
@@ -84,6 +85,7 @@ function createTrueAndFalseButtons() {
   funFactElement.style.flexDirection = 'column'
   funFactElement.style.justifyContent = 'center'
   funFactElement.style.alignItems = 'center'
+  funFactElement.style.fontSize = "40px"
 }
 
 function checkForTrueAndFalse(evt) {
