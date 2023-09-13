@@ -34,19 +34,19 @@ falseButton.addEventListener('click', checkForTrueAndFalse)
 
 /*-------------------------------- Functions --------------------------------*/
 function selectCategory(evt) {
-if(evt.target.id === 'oceanbtn') {
-  currentCategory = [...funFactsOceans]
-  buttonAudio.playOceanSound()
-}
-if(evt.target.id === 'birdbtn'){
-  currentCategory = [...funFactsBirds]
-  buttonAudio.playBirdsSound()
-}
-if(evt.target.id === 'fishbtn'){
-  currentCategory = [...funFactsFish]
-  buttonAudio.playFishSound()
-}
-render()
+  if(evt.target.id === 'oceanbtn') {
+    currentCategory = [...funFactsOceans]
+    buttonAudio.playOceanSound()
+  }
+  if(evt.target.id === 'birdbtn') {
+    currentCategory = [...funFactsBirds]
+    buttonAudio.playBirdsSound()
+  }
+  if(evt.target.id === 'fishbtn') {
+    currentCategory = [...funFactsFish]
+    buttonAudio.playFishSound()
+  }
+  render()
 }
 
 function render() {
@@ -71,7 +71,6 @@ function displayFunFact() {
   funFactElement.textContent = funFact.fact
 }
 
-
 function createTrueAndFalseButtons() {
   trueAndFalse = document.createElement('div')
   trueAndFalse.setAttribute('id', 'trueandfalse')
@@ -89,11 +88,11 @@ function createTrueAndFalseButtons() {
 }
 
 function checkForTrueAndFalse(evt) {
-  if(evt.target.id === 'truebtn'){
+  if(evt.target.id === 'truebtn') {
     trueOrFalse = true
     falseButton.disabled = true
   }
-  if(evt.target.id === 'falsebtn'){
+  if(evt.target.id === 'falsebtn') {
     trueOrFalse = false
     trueButton.disabled = true
   }
