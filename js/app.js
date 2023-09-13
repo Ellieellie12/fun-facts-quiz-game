@@ -82,7 +82,6 @@ function createTrueAndFalseButtons() {
   funFactElement.appendChild(trueAndFalse)
   funFactElement.style.flexDirection = 'column'
   funFactElement.style.justifyContent = 'center'
-
 }
 
 function checkForTrueAndFalse(evt) {
@@ -164,7 +163,6 @@ function reset() {
   score = 0
   timeLeft = 40
   clearInterval(timer)
-  // scoreElement.textContent = 0
   timerElement.textContent = `${minute} : ${minute}`
   funFactElement.textContent = ''
   printScore()
