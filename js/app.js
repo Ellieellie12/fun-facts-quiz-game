@@ -82,8 +82,7 @@ function createTrueAndFalseButtons() {
   funFactElement.appendChild(trueAndFalse)
   funFactElement.style.flexDirection = 'column'
   funFactElement.style.justifyContent = 'center'
-  funFactElement.style.alignItems = 'center'
-  funFactElement.style.fontSize = '35px'
+
 }
 
 function checkForTrueAndFalse(evt) {

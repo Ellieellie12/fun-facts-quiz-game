@@ -41,25 +41,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  font-size: 35px;
+  font-family: 'Trebuchet MS';
   margin-top: 60px;
   margin-bottom: 40px;
   height: 280px;
 }
-
-/* .oceansimg {
-  height: 250px;
-  width: 250px;
-}
-
-.birdsimg {
-  height: 250px;
-  width: 250px;
-}
-
-.fishimg {
-  height: 250px;
-  width: 250px;
-} */
 
 #categorybuttons {
   display: flex;
@@ -122,5 +109,5 @@ body {
   display: flex;
   /* justify-content: space-; */
   margin-top: 30px;
-  /* width: 200px; */
+  width: 200px;
 }
