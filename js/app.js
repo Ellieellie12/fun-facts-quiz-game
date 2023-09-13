@@ -26,7 +26,6 @@ const fishImage = document.querySelector('.fishimg')
 const funFactElement = document.querySelector('#categoryimages')
 
 /*----------------------------- Event Listeners -----------------------------*/
-
 categoryButtons.addEventListener('click', selectCategory)
 resetButton.addEventListener('click', reset)
 trueButton.addEventListener('click', checkForTrueAndFalse)

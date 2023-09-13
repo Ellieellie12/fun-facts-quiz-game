@@ -3,7 +3,6 @@ div {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* border: solid 2px black; */
 }
 
 body {
@@ -15,18 +14,15 @@ body {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 60px;
   margin-top: 30px;
-  /* border: solid 2px black; */
 }
 
 #scoretimerandresetbutton {
   justify-content: space-evenly;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-top: 30px;
-  /* border: solid 2px black; */
   font-size: 30px;
   height: 75px;
 }
-
 
 .resetbutton {
   display: flex;
@@ -35,6 +31,8 @@ body {
   margin-top: 0px 20px;
   font-size: 25px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color:rgb(117, 43, 186);
+  background-color: rgb(177, 211, 241);
   border-radius: 40px;
   cursor: pointer;
 }
@@ -45,11 +43,10 @@ body {
   justify-content: space-evenly;
   margin-top: 60px;
   margin-bottom: 40px;
-  /* border: solid 2px black; */
   height: 280px;
 }
 
-.oceansimg {
+/* .oceansimg {
   height: 250px;
   width: 250px;
 }
@@ -62,20 +59,20 @@ body {
 .fishimg {
   height: 250px;
   width: 250px;
-}
+} */
 
 #categorybuttons {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 10px;
+  margin-bottom: 300px;
   height: 75px;
 }
 
 .oceansbutton {
-  color: blue;
+  color: rgb(123, 7, 123);
   font-size: 25px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: snow;
+  background-color: rgb(56, 135, 76);
   border-radius: 4px;
   cursor: pointer;
   margin-right: 100px;
@@ -83,10 +80,10 @@ body {
 }
 
 .birdsbutton {
-  color: red;
+  color: rgb(190, 58, 58);
   font-size: 25px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: snow;
+  background-color: rgb(38, 57, 181);
   border-radius: 4px;
   cursor: pointer;
   margin-right: 100px;
@@ -94,17 +91,17 @@ body {
 }
 
 .fishbutton {
-  color: green;
+  color: rgb(9, 93, 9);
   font-size: 25px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: snow;
+  background-color: rgb(221, 79, 28);
   border-radius: 4px;
   cursor: pointer;
   width: 100px;
 }
 
-
 #truebtn {
+  color:rgb(44, 170, 13);
   font-size: 25px;
   width: 100px;
   background-color: snow;
@@ -113,6 +110,7 @@ body {
 }
 
 #falsebtn {
+  color:rgb(28, 79, 231);
   font-size: 25px;
   width: 100px;
   background-color: snow;
@@ -122,228 +120,7 @@ body {
 
 #trueandfalse {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-; */
   margin-top: 30px;
-  width: 200px;
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* h1 {
-  display: flex;
-  justify-content: center;
-  font-size: 50px ;
-  /* text-align: center; */
-/* }
-
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-evenly;
-  margin-top: 150px;
-  
-
-}
-
-.categorybuttons {
-  display: flex;
-  justify-content: center;
-  justify-content: space-evenly;
-}
- */
-
-
-
-
-/* h1 {
-  text-align: center;
-  font-weight: 360;
-  font-size: 45px;
-  cursor: pointer;
-}
-
-h2 {
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  cursor: pointer;
-}
-
-h3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#countdown {
-  font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.displayfunfacts {
-  font-size: 22px;
-  font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  margin: 10px 10px;
-  margin-left: auto;
-}
-
-div {
-  margin: 0px 50px
-}
-
-.buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-#oceans {
-  color: blue;
-  margin: 30px;
-  font-size: 16px;
-  background-color: snow;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#birds {
-  color: red;
-  margin: 30px;
-  font-size: 16px;
-  background-color: snow;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#fish {
-  color: green;
-  margin: 30px;
-  font-size: 16px;
-  background-color: snow;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.trueandfalseoceans {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: left;
-
-}
-
-#trueocean {
-  color: blue;
-  font-size: 16px;
-  background-color: snow;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#falseocean {
-  color: blue;
-  font-size: 16px;
-  background-color: snow;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#truebird {
-  color: red;
-  font-size: 16px;
-  background-color: snow;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#falsebird {
-  color: red;
-  font-size: 16px;
-  background-color: snow;
-  border-radius: 4px;
-  cursor: pointer;
-
-}
-
-#truefish {
-  color: green;
-  font-size: 16px;
-  background-color: snow;
-  border-radius: 4px;
-  cursor: pointer;
-
-}
-
-#falsefish {
-  color: green;
-  font-size: 16px;
-  background-color: snow;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.resetbutton {
-  color: black;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 560px;
-  border-radius: 4px;
-  cursor: pointer;
-
-}
-
-#resetbutton {
-  background-color: snow;
-  cursor: pointer;
+  /* width: 200px; */
 }
