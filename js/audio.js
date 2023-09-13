@@ -6,7 +6,7 @@ let fishSound = new Audio('../audio/fish.wav')
 function playOceanSound() {
   oceanSound.volume = 0.25
   oceanSound.play()
-  } 
+} 
 
 function playBirdsSound() {
   birdsSound.volume = 0.25
@@ -16,7 +16,7 @@ function playBirdsSound() {
 function playFishSound() {
   fishSound.volume = 0.25
   fishSound.play()
-  } 
+} 
 
 export{
   playOceanSound,

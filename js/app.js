@@ -85,7 +85,7 @@ function createTrueAndFalseButtons() {
   funFactElement.style.flexDirection = 'column'
   funFactElement.style.justifyContent = 'center'
   funFactElement.style.alignItems = 'center'
-  funFactElement.style.fontSize = "40px"
+  funFactElement.style.fontSize = '35px'
 }
 
 function checkForTrueAndFalse(evt) {
@@ -164,6 +164,8 @@ function createImages() {
 }
 
 function reset() {
+  score = 0
+  timeLeft = 40
   clearInterval(timer)
   scoreElement.textContent = 0
   timerElement.textContent = `${minute} : ${minute}`
