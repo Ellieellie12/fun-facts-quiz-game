@@ -99,6 +99,7 @@ function checkForTrueAndFalse(evt) {
     displayFunFact()
     nextQuestion()
 }
+
 function enableTrueAndFalse() {
   trueButton.disabled = false
   falseButton.disabled = false

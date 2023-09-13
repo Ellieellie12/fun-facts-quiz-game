@@ -3,7 +3,7 @@
 ## How Well Do You Know These Facts?
 Description: Fun Facts Quiz Game is a game created for children to have fun while they learn. Over 60 fun facts with a great selection of categories to choose from. 
 
-* The reason I chose this game because I wanted to create a way for children to learn but in fun way. It's not just a game that can be played alone you are able to sit with a friend and try to figure out the correct answers and that allows for more than one person to gain knowledge.
+* The reason I chose this game was because I wanted to create a way for children to learn but in fun way. It's not just a game that can be played alone you are able to sit with a friend and try to figure out the correct answers and that allows for more than one person to gain knowledge.
 
 ## Getting Started:
 Click to play the game: https://fun-fact-quiz-game.netlify.app/
