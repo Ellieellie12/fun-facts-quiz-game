@@ -1,5 +1,5 @@
 # Fun Fact Quiz Game
-![photograph of fun fact quiz game with 3 categories which includes oceans, birds, and fish](<js/images/fun quiz game.png>)
+![photograph of fun fact quiz game with 3 categories which includes oceans, birds, and fish](./js/images/fun-facts-game-picture.png)
 ## How Well Do You Know These Facts?
 Description: Fun Facts Quiz Game is a game created for children to have fun while they learn. Over 60 fun facts with a great selection of categories to choose from. 
 
@@ -35,7 +35,7 @@ https://docs.google.com/document/d/1xlyt8k80uL8ruvw8gmAkv7gmJPL6QPHAuEeivT9yHus/
 
 ## Future Plans For The Game:
 - Add 7 more categories to the game
-- Go more in depth with the fun facts that are given
+- Go more in depth with the fun facts
 - Add difficulty levels to the game
-- Add audio function to all buttons
+- Add audio function restart button
 - Add more CSS styling
