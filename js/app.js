@@ -111,7 +111,7 @@ function nextQuestion() {
 }
 
 function printScore() {
-  scoreElement.textContent = `${score}`
+  scoreElement.textContent = 'Score: ' + `${score}`
 }
 
 function printTimer() {
@@ -164,9 +164,10 @@ function reset() {
   score = 0
   timeLeft = 40
   clearInterval(timer)
-  scoreElement.textContent = 0
+  // scoreElement.textContent = 0
   timerElement.textContent = `${minute} : ${minute}`
   funFactElement.textContent = ''
+  printScore()
   displayButtons()
   createImages()
   showImages()
